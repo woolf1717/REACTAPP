@@ -6,7 +6,7 @@ import Menu from "../components/menu";
 import Empty from "../components/empty";
 import { Container } from "../components/container";
 
-export default function Home() {
+export default function SingIn() {
   return (
     <>
       <Menu />

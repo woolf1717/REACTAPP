@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import Search from "./search";
+import LoginForm from "./loginForm";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -15,55 +16,58 @@ export default function Menu() {
   const myAccountArrowUp = <FontAwesomeIcon icon={faChevronUp} />;
 
   const [myAccountActive, setMyAccountActive] = useState(false);
+  const [mySearchActive, setMySearchActive] = useState(false);
 
-  function showMore() {
+  function showMoreMyAccount() {
     setMyAccountActive(!myAccountActive);
   }
+  function showMoreSearch() {
+    setMySearchActive(!mySearchActive);
+  }
+
   console.log(myAccountActive);
 
   return (
     <nav className=" w-screen bg-blue-950 px-8 overflow-hidden">
       <div className="h-10 bg-blue-950">
         <div className=" h-10 text-amber-50 flex justify-end items-center">
-          <div>
+          <button
+            onClick={showMoreSearch}
+            className="hover:text-yellow-400 z-10"
+          >
             <Search />
-          </div>
+          </button>
           <div className="relative inline-block ml-4 mr-px z-10">
-            <Link href={"/login"} className="">
+            <Link href={"/login"} className="hover:text-yellow-400">
               My Account{" "}
             </Link>{" "}
-            <button onClick={showMore}>
+            <button
+              onClick={showMoreMyAccount}
+              className="hover:text-yellow-400"
+            >
               {myAccountActive ? myAccountArrowDown : myAccountArrowUp}
             </button>
           </div>{" "}
           <div className="absolute w-40 h-6 ">
-            {myAccountActive ? (
-              <p className="bg-blue-950 mt-9 p-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ea
-                iure at similique, vel, in ipsum quibusdam vero sed labore,
-                molestiae praesentium?
-              </p>
-            ) : (
-              ""
-            )}
+            {myAccountActive ? <LoginForm /> : ""}
           </div>
         </div>
       </div>
       <div className="h-8 bg-blue-950 border-t border-amber-50 z-10">
         <div className="text-amber-50 leading-7">
-          <Link href={"/"} className="ml-px mr-4">
+          <Link href={"/"} className="ml-px mr-4 hover:text-yellow-400">
             Start
           </Link>
-          <Link href={"/blog"} className="mx-4">
+          <Link href={"/blog"} className="mx-4 hover:text-yellow-400">
             Blog
           </Link>
-          <Link href={"/shop"} className="mx-4">
+          <Link href={"/shopingarea"} className="mx-4 hover:text-yellow-400">
             Shop
           </Link>
-          <Link href={"/about"} className="mx-4">
+          <Link href={"/about"} className="mx-4 hover:text-yellow-400">
             About
           </Link>
-          <Link href={"/contact"} className="mx-4">
+          <Link href={"/contact"} className="mx-4 hover:text-yellow-400">
             Contact
           </Link>
         </div>
