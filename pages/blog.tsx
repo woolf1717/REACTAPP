@@ -10,8 +10,10 @@ export default function Home() {
   return (
     <>
       <Menu />
-      <h1>Blog</h1>
-      <Empty />
+      <Container>
+        <h1>Blog</h1>
+        <Empty />
+      </Container>
     </>
   );
 }

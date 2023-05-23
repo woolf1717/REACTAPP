@@ -4,13 +4,16 @@ import Link from "next/link";
 
 import Menu from "../components/menu";
 import Empty from "../components/empty";
+import { Container } from "../components/container";
 
 export default function Home() {
   return (
     <>
       <Menu />
-      <h1>Login</h1>
-      <Empty />
+      <Container>
+        <h1>Login</h1>
+        <Empty />
+      </Container>
     </>
   );
 }

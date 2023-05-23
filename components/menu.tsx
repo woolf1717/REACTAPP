@@ -26,7 +26,7 @@ export default function Menu() {
         </div>
       </div>
       <div className="h-8 bg-blue-950 border-t border-amber-50">
-        <div className="text-amber-50">
+        <div className="text-amber-50 leading-7">
           <Link href={"/"} className="ml-px mr-4">
             Start
           </Link>
