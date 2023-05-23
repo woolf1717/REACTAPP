@@ -10,7 +10,6 @@ export default function Search() {
     <>
       <div className="inline-block">
         <FontAwesomeIcon icon={faMagnifyingGlass} />
-        Elo
       </div>
     </>
   );

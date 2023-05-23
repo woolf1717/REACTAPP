@@ -4,8 +4,12 @@ export default function LoginForm() {
   return (
     <>
       <form className="bg-blue-950 mt-9 p-2">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod odio ab
-        reprehenderit.
+        <label>Login:</label>
+        <br />
+        <input className="h-4 w-36" type="text" />
+        <label>Password:</label>
+        <br />
+        <input className="h-4 w-36" type="text" name="fname" />
       </form>
     </>
   );
