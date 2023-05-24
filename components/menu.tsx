@@ -46,14 +46,14 @@ export default function Menu() {
               }`}
             >
               MyAccount{" "}
-            </Link>{" "}
+            </Link>
             <button
               onClick={showMoreMyAccount}
               className="hover:text-yellow-400"
             >
               {myAccountActive ? myAccountArrowDown : myAccountArrowUp}
             </button>
-          </div>{" "}
+          </div>
           <div className="absolute w-40 h-6 ">
             {myAccountActive ? <LoginForm /> : ""}
           </div>

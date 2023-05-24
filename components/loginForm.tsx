@@ -24,26 +24,24 @@ export default function LoginForm() {
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("loggedIn", loggedIn.toString());
+    window.localStorage.setItem("loggedIn", new Boolean(loggedIn).toString());
   }, [loggedIn]);
 
   useEffect(() => {
-    setPasswordInput(
-      JSON.stringify(window.localStorage.getItem("passwordInput")!)
-    );
-  }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem("passwordInput", passwordInput);
-  }, [passwordInput]);
-
-  useEffect(() => {
-    setLoginInput(JSON.stringify(window.localStorage.getItem("loginInput")!));
+    setLoginInput(window.localStorage.getItem("loginInput")!);
   }, []);
 
   useEffect(() => {
     window.localStorage.setItem("loginInput", loginInput);
   }, [loginInput]);
+
+  useEffect(() => {
+    setPasswordInput(window.localStorage.getItem("passwordInput")!);
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("passwordInput", passwordInput);
+  }, [passwordInput]);
 
   let actualForm;
 
