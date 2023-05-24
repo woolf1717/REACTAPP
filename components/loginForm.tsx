@@ -50,11 +50,11 @@ export default function LoginForm() {
   if (loggedIn) {
     actualForm = (
       <>
-        <div className="bg-blue-950 mt-9 p-2 flex flex-col content-between text-sm w-52 -translate-x-12">
+        <div className="bg-blue-950 mt-9 p-2 flex flex-col content-between text-sm w-52 -translate-x-12 transition">
           <p className="text-center">Hello user, {loginInput}!!!</p>
 
           <p className="text-center">
-            In case you forgot your password it`s: {passwordInput} ;D
+            In case you forgot your password is: {passwordInput} ;D
           </p>
           <button
             className="border border-amber-50 mt-2 mx-10 text-xs"
