@@ -35,7 +35,7 @@ export default function Search() {
           >
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
-          <input className="text-xs text-black" type="text" />
+          <input className="text-sm text-black rounded-3xl" type="text" />
         </div>
       </>
     );

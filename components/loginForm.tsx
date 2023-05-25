@@ -48,7 +48,7 @@ export default function LoginForm() {
   if (loggedIn) {
     actualForm = (
       <>
-        <div className="bg-blue-950 mt-9 p-2 flex flex-col content-between text-sm w-52 -translate-x-12 transition">
+        <div className=" relative bg-blue-950 mt-9 p-2 flex flex-col content-between text-sm w-52 -translate-x-12 transition z-10">
           <p className="text-center">Hello user, {loginInput}!!!</p>
 
           <p className="text-center">
@@ -69,7 +69,7 @@ export default function LoginForm() {
       <>
         <form
           onSubmit={handleLogIn}
-          className="bg-blue-950 mt-9 p-2 flex flex-col content-between text-sm"
+          className="relative bg-blue-950 mt-9 p-2 flex flex-col content-between text-sm z-10"
         >
           <label className="py-0.5">Login/Email:</label>
           <input

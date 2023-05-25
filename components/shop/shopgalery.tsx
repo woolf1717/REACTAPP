@@ -5,7 +5,7 @@ import React from "react";
 export default function ShopGalery() {
   return (
     <>
-      <div className="bg-neutral-50 col-start-2 col-end-5 p-4 overflow-hidden">
+      <div className="bg-neutral-50 col-start-2 col-end-5 p-4 overflow-hidden rounded-md">
         ShopGalery Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         Dolore amet qui placeat fuga aut odio, maxime ullam nobis ipsum illo
         deleniti doloremque nihil cum ea, harum atque, itaque eum dolor! Lorem

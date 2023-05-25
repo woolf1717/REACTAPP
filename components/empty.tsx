@@ -11,7 +11,7 @@ const user = {
 export default function Empty() {
   return (
     <>
-      <picture className="bg-neutral-50 p-4 overflow-hidden">
+      <picture className="bg-neutral-50 p-4 overflow-hidden rounded-md">
         <h1>{user.name}</h1>
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
         <p>

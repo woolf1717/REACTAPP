@@ -16,7 +16,7 @@ export default function Shop() {
     <>
       <Menu />
       <Container>
-        <div className="grid grid-cols-4 grid-rows-4 gap-4 h-screen">
+        <div className="grid grid-cols-4 grid-rows-3 gap-4 h-full relative ">
           <ShopNav />
           <ShopPoster />
           <ShopBlank />
@@ -26,10 +26,10 @@ export default function Shop() {
           <ShopBlank />
           <Empty />
           <Empty />
+          {/* <Empty />
           <Empty />
           <Empty />
-          <Empty />
-          <Empty />
+          <Empty /> */}
         </div>
       </Container>
       <Footer />
