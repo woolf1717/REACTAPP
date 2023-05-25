@@ -5,6 +5,7 @@ import Link from "next/link";
 import Menu from "../components/menu";
 import Empty from "../components/empty";
 import { Container } from "../components/container";
+import Footer from "../components/footer";
 
 export default function SingIn() {
   return (
@@ -14,6 +15,7 @@ export default function SingIn() {
         <h1>Sign In</h1>
         <Empty />
       </Container>
+      <Footer />
     </>
   );
 }

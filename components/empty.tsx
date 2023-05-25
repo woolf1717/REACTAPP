@@ -11,8 +11,8 @@ const user = {
 export default function Empty() {
   return (
     <>
-      <h1>{user.name}</h1>
-      <picture>
+      <picture className="bg-neutral-50 p-4 overflow-hidden">
+        <h1>{user.name}</h1>
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi

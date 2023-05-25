@@ -7,5 +7,5 @@ type Props = {
 };
 
 export const Container = ({ children }: Props) => {
-  return <div className="mx-10 mt-2 h-screen">{children}</div>;
+  return <div className="mx-16 mt-6 h-screen">{children}</div>;
 };

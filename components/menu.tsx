@@ -29,9 +29,9 @@ export default function Menu() {
   }
 
   return (
-    <nav className=" w-screen bg-blue-950 px-8 overflow-hidden">
-      <div className="h-10 bg-blue-950">
-        <div className=" h-10 text-amber-50 flex justify-end items-center">
+    <nav className=" w-screen bg-blue-950 pl-16 pr-20 overflow-hidden text-lg">
+      <div className="h-12 bg-blue-950">
+        <div className=" h-12 text-amber-50 flex justify-end items-center">
           <button
             onClick={showMoreSearch}
             className="hover:text-yellow-400 z-10"
@@ -49,21 +49,21 @@ export default function Menu() {
             </Link>
             <button
               onClick={showMoreMyAccount}
-              className="hover:text-yellow-400"
+              className="hover:text-yellow-400 pr-2"
             >
               {myAccountActive ? myAccountArrowDown : myAccountArrowUp}
             </button>
           </div>
-          <div className="absolute w-40 h-6 ">
+          <div className="absolute w-40 h-4 ">
             {myAccountActive ? <LoginForm /> : ""}
           </div>
         </div>
       </div>
-      <div className="h-8 bg-blue-950 border-t border-amber-50 z-10">
-        <div className="text-amber-50 leading-7">
+      <div className="h-12 bg-blue-950 border-t border-amber-50 z-10">
+        <div className="text-amber-50 leading-10 pt-0.5">
           <Link
             href={"/"}
-            className={`ml-px mr-4 hover:text-yellow-400 active:text-yellow-400 ${
+            className={`ml-px mr-4 hover:text-yellow-400 active:text-yellow-400 pl-2   ${
               router.pathname == "/" ? "text-yellow-400" : ""
             }`}
           >

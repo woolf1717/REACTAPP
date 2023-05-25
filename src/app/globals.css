@@ -24,4 +24,5 @@ body {
       rgb(var(--foreground-rgb))
     )
     rgb(var(--foreground-rgb));
+  overflow-x: hidden;
 }

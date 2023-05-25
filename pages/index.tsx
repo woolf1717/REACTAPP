@@ -3,6 +3,7 @@ import "../src/app/globals.css";
 import Menu from "../components/menu";
 import Empty from "../components/empty";
 import { Container } from "../components/container";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           quae! Voluptatem, ullam dolore.
         </p>
       </Container>
+      <Footer />
     </>
   );
 }

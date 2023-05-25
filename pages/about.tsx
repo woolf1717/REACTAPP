@@ -5,6 +5,7 @@ import Link from "next/link";
 import Menu from "../components/menu";
 import Empty from "../components/empty";
 import { Container } from "../components/container";
+import Footer from "../components/footer";
 
 export default function About() {
   return (
@@ -14,6 +15,7 @@ export default function About() {
         <h1>About</h1>
         <Empty />
       </Container>
+      <Footer />
     </>
   );
 }
