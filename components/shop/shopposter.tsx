@@ -14,8 +14,6 @@ export default function ShopPoster() {
           <div>
             <Image
               src={modelPhoto}
-              // width={1000}
-              // height={500}
               quality={100}
               alt="Andrea Piacquadio"
               className="justify-center absolute -translate-y-2 opacity-50"

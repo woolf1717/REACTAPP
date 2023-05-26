@@ -2,23 +2,62 @@
 
 import React from "react";
 
+import ItemVertical from "./shopcomponents/itemvertical";
+import shirt from "../../src/pictures/products/koszula/Przechwytywanie.jpg";
+
+import shirtTwo from "../../src/pictures/products/koszula2/Przechwytywanie.jpg";
+import shoes from "../../src/pictures/products/buty2/Przechwytywanie.jpg";
+import watch from "../../src/pictures/products/zegarek/2.jpg";
+import spodnie from "../../src/pictures/products/spodnie/2.jpg";
+
 export default function ShopGalery() {
   return (
     <>
-      <div className="bg-neutral-50 col-start-2 col-end-5 p-4 overflow-hidden rounded-md">
-        ShopGalery Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Dolore amet qui placeat fuga aut odio, maxime ullam nobis ipsum illo
-        deleniti doloremque nihil cum ea, harum atque, itaque eum dolor! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Veniam, vel id.
-        Laudantium, sunt? Non ut corporis cumque modi nobis similique, ipsum
-        illo molestiae odio ea iusto. Iure ipsam nulla esse! Minima error ut,
-        obcaecati assumenda facilis accusantium eos, esse amet nobis commodi,
-        ullam eum similique natus? Iusto dolorum placeat quibusdam aliquid
-        obcaecati, fuga ab molestiae reiciendis asperiores, itaque delectus non?
-        Odio consequuntur molestias, sunt reiciendis fuga sit veniam officiis
-        ipsum, voluptates amet exercitationem tenetur repellat corrupti velit
-        ipsa illum quam autem repellendus. Esse exercitationem placeat tempora
-        cum delectus minus ipsam.
+      <div className="bg-neutral-50 col-start-2 col-end-5 p-4 overflow-hidden rounded-md flex flex-col relative">
+        <div className="flex justify-between items-center">
+          <h1 className="uppercase text-lg font-bold ">
+            new products in sales
+          </h1>
+          <h2 className=" text-sm font-semibold  text-yellow-400">More</h2>
+        </div>
+        <div className="relative flex items-center">
+          <div className="p-2">
+            <ItemVertical
+              src={shoes}
+              starsprops={5}
+              name={"Shoes"}
+              price={850}
+              descr={"Opis produktu (krótki opis). Buty trekingowe"}
+            />
+          </div>
+          <div className="p-2">
+            <ItemVertical
+              src={shirtTwo}
+              starsprops={3.5}
+              name={"Men shirt two"}
+              price={500}
+              descr={"Opis produktu (krótki opis)"}
+            />
+          </div>
+          <div className="p-2">
+            <ItemVertical
+              src={watch}
+              starsprops={4.5}
+              name={"Men watch"}
+              price={1799}
+              descr={"Opis produktu (krótki opis)"}
+            />
+          </div>
+          <div className="p-2">
+            <ItemVertical
+              src={spodnie}
+              starsprops={4}
+              name={"Men trousers"}
+              price={600}
+              descr={"Opis produktu (krótki opis)"}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
