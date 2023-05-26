@@ -13,12 +13,12 @@ import spodnie from "../../src/pictures/products/spodnie/2.jpg";
 export default function ShopGalery() {
   return (
     <>
-      <div className="bg-neutral-50 col-start-2 col-end-5 p-4 overflow-hidden rounded-md flex flex-col relative">
-        <div className="flex justify-between items-center">
-          <h1 className="uppercase text-lg font-bold ">
+      <div className="bg-neutral-50 row-start-3 row-end-5 col-start-2 col-end-5 p-4 overflow-hidden rounded-md flex flex-col relative">
+        <div className="flex justify-between items-center ">
+          <h1 className="uppercase text-sm font-bold ">
             new products in sales
           </h1>
-          <h2 className=" text-sm font-semibold  text-yellow-400">More</h2>
+          <h2 className=" text-xs font-semibold  text-yellow-400">More</h2>
         </div>
         <div className="relative flex items-center">
           <div className="p-2">
@@ -27,6 +27,7 @@ export default function ShopGalery() {
               starsprops={5}
               name={"Shoes"}
               price={850}
+              alt={""}
               descr={"Opis produktu (krótki opis). Buty trekingowe"}
             />
           </div>
@@ -36,6 +37,7 @@ export default function ShopGalery() {
               starsprops={3.5}
               name={"Men shirt two"}
               price={500}
+              alt={""}
               descr={"Opis produktu (krótki opis)"}
             />
           </div>
@@ -45,6 +47,7 @@ export default function ShopGalery() {
               starsprops={4.5}
               name={"Men watch"}
               price={1799}
+              alt={""}
               descr={"Opis produktu (krótki opis)"}
             />
           </div>
@@ -54,6 +57,7 @@ export default function ShopGalery() {
               starsprops={4}
               name={"Men trousers"}
               price={600}
+              alt={""}
               descr={"Opis produktu (krótki opis)"}
             />
           </div>
