@@ -11,6 +11,7 @@ export default function ItemVertical({
   name,
   descr,
   price,
+  alt,
 }: any) {
   return (
     <>
@@ -20,18 +21,19 @@ export default function ItemVertical({
           // width={1000}
           // height={500}
           quality={75}
-          alt="Andrea Piacquadio"
-          className="pt-2"
+          alt={alt}
+          className="pt-px"
         />
       </div>
-      <div className="text-sm font-semibold pt-2">{name}</div>
-      <div className="text-xs pt-2">{descr}</div>
-      <div className="text-yellow-400 ">
+      <div className="text-sm font-semibold pt-px">{name}</div>
+      <div className="text-xs ">{descr}</div>
+      <div className="text-yellow-400 text-xs pt-px flex flex-row">
+        {starsprops}
         <Rateing stars={starsprops} />
       </div>
       <div className="flex justify-between">
-        <div className="text-sm text-red-600 font-semibold">{price} PLN</div>
-        <div className="text-sm">Sale</div>
+        <div className="text-xs text-red-600 font-semibold">{price} PLN</div>
+        <div className="text-xs opacity-75">Sale</div>
       </div>
     </>
   );

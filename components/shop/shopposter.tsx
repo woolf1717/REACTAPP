@@ -9,7 +9,7 @@ import modelPhoto from "../../src/pictures/handsome-man.jpg";
 export default function ShopPoster() {
   return (
     <>
-      <div className=" col-start-2 col-end-5 overflow-hidden rounded-md  bg-black">
+      <div className=" row-start-1 row-end-3 col-start-2 col-end-5 overflow-hidden rounded-md  bg-black ">
         <div className="relative ">
           <div>
             <Image

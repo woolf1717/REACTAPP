@@ -28,10 +28,5 @@ export default function Rateing({ stars }: any) {
     );
   });
 
-  return (
-    <div>
-      {stars}
-      {ratingStar}
-    </div>
-  );
+  return <div>{ratingStar}</div>;
 }
