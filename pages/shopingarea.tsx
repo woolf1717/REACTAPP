@@ -10,6 +10,7 @@ import { Container } from "../components/container";
 import ShopPoster from "../components/shop/shopposter";
 import ShopGalery from "../components/shop/shopgalery";
 import Footer from "../components/footer";
+import ShopTopSale from "../components/shop/shoptopsale";
 
 export default function Shop() {
   return (
@@ -19,17 +20,10 @@ export default function Shop() {
         <div className="grid grid-cols-4 grid-rows-3 gap-4 h-full relative ">
           <ShopNav />
           <ShopPoster />
-          <ShopBlank />
+          <ShopTopSale />
           <ShopGalery />
-
-          <ShopBlank />
           <ShopBlank />
           <Empty />
-          <Empty />
-          {/* <Empty />
-          <Empty />
-          <Empty />
-          <Empty /> */}
         </div>
       </Container>
       <Footer />

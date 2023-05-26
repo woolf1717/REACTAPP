@@ -5,7 +5,7 @@ import bg from "../../src/pictures/handsome-man.jpg";
 import React from "react";
 
 import Image from "next/image";
-import profilePic from "../../src/pictures/handsome-man.jpg";
+import modelPhoto from "../../src/pictures/handsome-man.jpg";
 export default function ShopPoster() {
   return (
     <>
@@ -13,7 +13,7 @@ export default function ShopPoster() {
         <div className="relative ">
           <div>
             <Image
-              src={profilePic}
+              src={modelPhoto}
               // width={1000}
               // height={500}
               quality={100}
