@@ -7,11 +7,13 @@ import Empty from "../components/empty";
 import ShopBlank from "../components/shop/shopblank";
 import ShopNav from "../components/shop/shopnav";
 import { Container } from "../components/container";
-import ShopPoster from "../components/shop/shopposter";
+import ShopPosterOne from "../components/shop/shopposterone";
+import ShopPosterTwo from "../components/shop/shoppostertwo";
 import ShopGalery from "../components/shop/shopgalery";
 import Footer from "../components/footer";
 import ShopTopSale from "../components/shop/shoptopsale";
 import ShopNewOffers from "../components/shop/shopnewoffers";
+import ShopGaleryWoman from "../components/shop/shopgalerywoman";
 
 export default function Shop() {
   return (
@@ -19,18 +21,14 @@ export default function Shop() {
       <Menu />
       <Container>
         <div className="h-full">
-          <div className="grid grid-cols-4 grid-rows-8 gap-3 relative h-full">
+          <div className="grid grid-cols-4 grid-rows-15 gap-3 relative h-full">
             <ShopNav />
-            <ShopPoster />
+            <ShopPosterOne />
             <ShopTopSale />
             <ShopGalery />
             <ShopNewOffers />
-            <ShopBlank />
-            <ShopBlank />
-            <ShopBlank />
-            <ShopBlank />
-            <ShopBlank />
-            <ShopBlank />
+            <ShopPosterTwo />
+            <ShopGaleryWoman />
           </div>
         </div>
       </Container>

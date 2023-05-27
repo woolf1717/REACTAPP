@@ -12,7 +12,6 @@ export default function Login() {
     <>
       <Menu />
       <Container>
-        <h1>Login</h1>
         <Empty />
       </Container>
       <Footer />

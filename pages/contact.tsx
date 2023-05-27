@@ -12,7 +12,6 @@ export default function Contact() {
     <>
       <Menu />
       <Container>
-        <h1>Contact</h1>
         <Empty />
       </Container>
       <Footer />

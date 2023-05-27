@@ -26,7 +26,7 @@ export default function ItemHorizontal({
         />
       </div>
       <div className="flex flex-col w-2/4 justify-evenly py-2 pl-2">
-        <div className="text-xxs font-semibold pt-px">{name}</div>
+        <div className="text-xs font-semibold pt-px">{name}</div>
         {/* <div className="text-xxs ">{descr}</div> */}
         <div className="text-yellow-400 text-xxs pt-px">
           <Rateing stars={starsprops} />

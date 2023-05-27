@@ -10,10 +10,10 @@ import shoes from "../../src/pictures/products/buty2/Przechwytywanie.jpg";
 import watch from "../../src/pictures/products/zegarek/2.jpg";
 import spodnie from "../../src/pictures/products/spodnie/2.jpg";
 
-export default function ShopGalery() {
+export default function ShopGaleryWoman() {
   return (
     <>
-      <div className="bg-neutral-50 row-start-5 row-end-9 col-start-2 col-end-5 p-4 overflow-hidden rounded-md flex flex-col relative">
+      <div className="bg-neutral-50 row-start-12 row-end-16 col-start-2 col-end-5 p-4 overflow-hidden rounded-md flex flex-col relative">
         <div className="flex justify-between items-center ">
           <h1 className="uppercase text-sm font-bold ">
             new products in sales
@@ -23,20 +23,20 @@ export default function ShopGalery() {
         <div className="relative flex items-center">
           <div className="p-2">
             <ItemVertical
-              src={shoes}
-              starsprops={5}
-              name={"Shoes"}
-              price={850}
-              alt={""}
-              descr={"Opis produktu (krótki opis). Buty trekingowe"}
-            />
-          </div>
-          <div className="p-2">
-            <ItemVertical
               src={shirtTwo}
               starsprops={3.5}
               name={"Men shirt two"}
               price={500}
+              alt={""}
+              descr={"Opis produktu (krótki opis)"}
+            />
+          </div>
+          <div className="p-2">
+            <ItemVertical
+              src={spodnie}
+              starsprops={4}
+              name={"Men trousers"}
+              price={600}
               alt={""}
               descr={"Opis produktu (krótki opis)"}
             />
@@ -53,12 +53,12 @@ export default function ShopGalery() {
           </div>
           <div className="p-2">
             <ItemVertical
-              src={spodnie}
-              starsprops={4}
-              name={"Men trousers"}
-              price={600}
+              src={shoes}
+              starsprops={5}
+              name={"Shoes"}
+              price={850}
               alt={""}
-              descr={"Opis produktu (krótki opis)"}
+              descr={"Opis produktu (krótki opis). Buty trekingowe"}
             />
           </div>
         </div>

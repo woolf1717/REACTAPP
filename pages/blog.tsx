@@ -12,7 +12,7 @@ export default function Blog() {
     <>
       <Menu />
       <Container>
-        <h1>Blog</h1>
+        {/* <h1>Blog</h1> */}
         <Empty />
       </Container>
       <Footer />

@@ -20,7 +20,7 @@ export default function Search() {
   if (search) {
     outcome = (
       <>
-        <div className="inline-block" onClick={handleSearchInit}>
+        <div className="inline-block h-full" onClick={handleSearchInit}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </div>
       </>
@@ -30,7 +30,7 @@ export default function Search() {
       <>
         <div className="">
           <div
-            className="inline-block text-yellow-400 text-sm mr-2"
+            className="inline-block text-yellow-400 text-sm mr-1"
             onClick={handleSearchAbort}
           >
             <FontAwesomeIcon icon={faMagnifyingGlass} />

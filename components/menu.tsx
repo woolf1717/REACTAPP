@@ -5,9 +5,12 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import Search from "./search";
 import LoginForm from "./loginForm";
+
+import logo from "../src/pictures/logo/logo2.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -30,15 +33,20 @@ export default function Menu() {
 
   return (
     <nav className=" w-screen bg-blue-950 pl-16 pr-20 overflow-hidden text-lg">
-      <div className="h-12 bg-blue-950">
-        <div className=" h-12 text-amber-50 flex justify-end items-center">
+      <div className="h-12 bg-blue-950 flex justify-between text-amber-50">
+        {" "}
+        <div className="w-40 pt-3 pl-2">
+          <Image src={logo} quality={100} alt="logo" height={50} />
+        </div>
+        {/* <div className=" h-12 text-amber-50 flex justify-end items-center"> */}
+        <div className="flex flex-end pt-3">
           <button
             onClick={showMoreSearch}
-            className="hover:text-yellow-400 z-10"
+            className="hover:text-yellow-400 z-10 pb-2"
           >
             <Search />
           </button>
-          <div className="relative inline-block ml-4 mr-px z-10">
+          <div className="inline-block ml-4 mr-px z-50 ">
             <Link
               href={"/login"}
               className={`hover:text-yellow-400 active ${
@@ -53,11 +61,12 @@ export default function Menu() {
             >
               {myAccountActive ? myAccountArrowDown : myAccountArrowUp}
             </button>
-          </div>
-          <div className="absolute w-40 h-4 ">
-            {myAccountActive ? <LoginForm /> : ""}
+            <div className="w-40 h-4 absolute">
+              {myAccountActive ? <LoginForm /> : ""}
+            </div>
           </div>
         </div>
+        {/* </div> */}
       </div>
       <div className="h-12 bg-blue-950 border-t border-amber-50 z-10">
         <div className="text-amber-50 leading-10 pt-0.5">

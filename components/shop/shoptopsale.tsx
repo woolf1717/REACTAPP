@@ -8,7 +8,7 @@ import shirt from "../../src/pictures/products/koszula/Przechwytywanie.jpg";
 export default function ShopTopSale() {
   return (
     <>
-      <div className="bg-neutral-50 row-start-3 row-end-5  px-4 pt-2 overflow-hidden rounded-md">
+      <div className="bg-neutral-50 row-start-5 row-end-9  px-4 pt-2 overflow-hidden rounded-md">
         <div className="flex justify-between items-center">
           <h1 className="uppercase text-sm font-bold ">hot sale</h1>
           <h2 className=" text-xs font-semibold  text-yellow-400">More</h2>

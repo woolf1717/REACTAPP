@@ -12,7 +12,6 @@ export default function About() {
     <>
       <Menu />
       <Container>
-        <h1>About</h1>
         <Empty />
       </Container>
       <Footer />
