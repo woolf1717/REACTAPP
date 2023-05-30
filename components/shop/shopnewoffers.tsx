@@ -16,7 +16,7 @@ import jacket from "../../src/pictures/products/kurtka/Przechwytywanie.jpg";
 export default function ShopNewOffers() {
   return (
     <>
-      <div className="bg-neutral-50 row-start-9 row-end-15  px-2 pt-2 overflow-hidden rounded-md">
+      <div className="bg-neutral-50 px-2 pt-2 overflow-hidden rounded-md">
         <div className="flex justify-between items-center">
           <h1 className="uppercase text-sm font-bold ">NewOffer</h1>
           <h2 className=" text-xs font-semibold  text-yellow-400">More</h2>

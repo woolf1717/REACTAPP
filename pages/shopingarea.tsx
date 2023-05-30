@@ -21,7 +21,7 @@ export default function Shop() {
       <Menu />
       <Container>
         <div className="h-full">
-          <div className="grid grid-cols-4 grid-rows-15 gap-3 relative h-full">
+          <div className="grid grid-cols-2 grid-rows-8 gap-3 relative h-full">
             <ShopNav />
             <ShopPosterOne />
             <ShopTopSale />

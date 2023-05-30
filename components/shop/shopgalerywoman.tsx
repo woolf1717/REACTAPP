@@ -13,7 +13,7 @@ import spodnie from "../../src/pictures/products/spodnie/2.jpg";
 export default function ShopGaleryWoman() {
   return (
     <>
-      <div className="bg-neutral-50 row-start-12 row-end-16 col-start-2 col-end-5 p-4 overflow-hidden rounded-md flex flex-col relative">
+      <div className="bg-neutral-50 p-4 overflow-hidden rounded-md flex flex-col relative">
         <div className="flex justify-between items-center ">
           <h1 className="uppercase text-sm font-bold ">
             new products in sales

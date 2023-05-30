@@ -30,5 +30,6 @@
     ".next/types/**/*.ts",
     "components/shop/shopcomponents/itemhorizontal.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "useUnknownInCatchVariables": false
 }

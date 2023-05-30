@@ -1,12 +1,12 @@
-﻿import "../src/app/globals.css";
+﻿import "../../src/app/globals.css";
 
 import React from "react";
 import { useState, useEffect } from "react";
 
 export default function LoginForm() {
-  const [loginInput, setLoginInput] = useState("");
-  const [passwordInput, setPasswordInput] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loginInput, setLoginInput] = useState<string>("");
+  const [passwordInput, setPasswordInput] = useState<string>("");
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
   const handleLogIn = (e: any) => {
     e.preventDefault();

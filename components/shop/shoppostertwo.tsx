@@ -9,7 +9,7 @@ import modelPhoto from "../../src/pictures/woman-RonLach.jpg";
 export default function ShopPosterTwo() {
   return (
     <>
-      <div className="row-start-9 row-end-12 col-start-2 col-end-5 overflow-hidden rounded-md  bg-black">
+      <div className=" overflow-hidden rounded-md  bg-black">
         <div className="relative ">
           <div>
             <Image

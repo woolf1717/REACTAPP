@@ -1,14 +1,12 @@
 ﻿import React from "react";
 
-import Link from "next/link";
-
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Search() {
-  const [search, setSearch] = useState(true);
+  const [search, setSearch] = useState<boolean>(true);
 
   function handleSearchInit() {
     setSearch(false);
@@ -16,7 +14,9 @@ export default function Search() {
   function handleSearchAbort() {
     setSearch(true);
   }
+
   let outcome;
+
   if (search) {
     outcome = (
       <>
