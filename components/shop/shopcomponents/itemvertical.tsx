@@ -7,17 +7,19 @@ import Rateing from "./rateing";
 
 export default function ItemVertical({
   src,
-  starsprops,
+  width,
+  alt,
   name,
   descr,
+  starsprops,
   price,
-  alt,
 }: any) {
   return (
     <>
       <div>
         <Image
           src={src}
+          width={width}
           // width={1000}
           // height={500}
           quality={75}
@@ -25,15 +27,15 @@ export default function ItemVertical({
           className="pt-px"
         />
       </div>
-      <div className="text-sm font-semibold pt-px">{name}</div>
-      <div className="text-xs ">{descr}</div>
-      <div className="text-yellow-400 text-xs pt-px flex flex-row">
+      <div className="text-xxs font-semibold text-center">{name}</div>
+      <div className="text-xxs  ">{descr}</div>
+      <div className="text-yellow-400 text-xxs flex flex-row justify-center ">
         {starsprops}
         <Rateing stars={starsprops} />
       </div>
-      <div className="flex justify-between">
-        <div className="text-xs text-red-600 font-semibold">{price} PLN</div>
-        <div className="text-xs opacity-75">Sale</div>
+      <div className="flex justify-around pt-px">
+        <div className="text-xxs text-red-600 font-semibold">{price} PLN</div>
+        <div className="text-xxs opacity-75">Sale</div>
       </div>
     </>
   );

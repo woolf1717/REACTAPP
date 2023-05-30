@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ItemVertical from "./shopcomponents/itemvertical";
+import ItemHorizontal from "./shopcomponents/itemhorizontal";
 import shirt from "../../src/pictures/products/koszula/Przechwytywanie.jpg";
 
 import shirtTwo from "../../src/pictures/products/koszula2/Przechwytywanie.jpg";
@@ -13,16 +13,14 @@ import spodnie from "../../src/pictures/products/spodnie/2.jpg";
 export default function ShopGalery() {
   return (
     <>
-      <div className="bg-neutral-50 p-4 overflow-hidden rounded-md flex flex-col relative">
-        <div className="flex justify-between items-center ">
-          <h1 className="uppercase text-sm font-bold ">
-            new products in sales
-          </h1>
-          <h2 className=" text-xs font-semibold  text-yellow-400">More</h2>
+      <div className="bg-neutral-50 col-start-1 col-end-3 row-start-5 row-end-7 p-px overflow-hidden rounded-md flex flex-col relative">
+        <div className="flex justify-between items-center pt-2 px-2">
+          <h1 className="uppercase text-xs font-bold">new products in sales</h1>
+          <h2 className=" text-xxs font-semibold  text-yellow-400">More</h2>
         </div>
-        <div className="relative flex items-center">
-          <div className="p-2">
-            <ItemVertical
+        <div className="relative flex items-center pt-2">
+          <div className=" pl-4">
+            <ItemHorizontal
               src={shoes}
               starsprops={5}
               name={"Shoes"}
@@ -31,8 +29,8 @@ export default function ShopGalery() {
               descr={"Opis produktu (krótki opis). Buty trekingowe"}
             />
           </div>
-          <div className="p-2">
-            <ItemVertical
+          <div className="pr-4">
+            <ItemHorizontal
               src={shirtTwo}
               starsprops={3.5}
               name={"Men shirt two"}
@@ -41,8 +39,9 @@ export default function ShopGalery() {
               descr={"Opis produktu (krótki opis)"}
             />
           </div>
-          <div className="p-2">
-            <ItemVertical
+          {/* Here i want to make galery */}
+          {/* <div className="p-2">
+            <ItemHorizontal
               src={watch}
               starsprops={4.5}
               name={"Men watch"}
@@ -52,7 +51,7 @@ export default function ShopGalery() {
             />
           </div>
           <div className="p-2">
-            <ItemVertical
+            <ItemHorizontal
               src={spodnie}
               starsprops={4}
               name={"Men trousers"}
@@ -60,7 +59,7 @@ export default function ShopGalery() {
               alt={""}
               descr={"Opis produktu (krótki opis)"}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

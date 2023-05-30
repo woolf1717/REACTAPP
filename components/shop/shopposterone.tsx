@@ -9,7 +9,7 @@ import modelPhoto from "../../src/pictures/handsome-man.jpg";
 export default function ShopPosterOne() {
   return (
     <>
-      <div className=" overflow-hidden rounded-md bg-black">
+      <div className=" overflow-hidden rounded-md bg-black  col-start-1 col-end-3 row-start-1 row-end-3">
         <div className="relative">
           <div>
             <Image
@@ -19,17 +19,17 @@ export default function ShopPosterOne() {
               className="justify-center absolute -translate-y-2 opacity-50"
             />
           </div>{" "}
-          <div className="pl-14 pt-16 absolute">
-            <p className="uppercase text-sx font-semibold text-yellow-400 opacity-80">
+          <div className="pl-6 pt-8 absolute">
+            <p className="uppercase text-xs font-semibold text-yellow-400 opacity-80">
               top quality
             </p>
-            <p className="uppercase text-2xl font-semibold text-amber-50 pt-px">
+            <p className="uppercase text-xl font-semibold text-amber-50 pt-px">
               new collection
             </p>
-            <p className=" text-xs text-amber-50 opacity-80">
+            <p className=" text-xxs text-amber-50 opacity-80">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <button className="mt-3 uppercase text-sm font-semibold bg-yellow-400 py-2 px-5 rounded-sm ">
+            <button className="mt-3 uppercase text-xxs font-semibold bg-yellow-400 py-2 px-5 rounded-sm ">
               shop now
             </button>
           </div>

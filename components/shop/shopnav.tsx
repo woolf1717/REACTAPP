@@ -22,7 +22,7 @@ export default function ShopNav() {
 
   return (
     <>
-      <div className="bg-neutral-50 overflow-hidden flex flex-col items-center  pt-px font-semibold rounded-md">
+      <div className="bg-neutral-50 text-xs overflow-hidden flex flex-col items-center  pt-px font-semibold rounded-md row-start-3 row-end-5">
         <div className="flex flex-col h-2/4 w-full">
           <Link
             href={"/shopingarea"}

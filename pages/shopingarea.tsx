@@ -20,8 +20,8 @@ export default function Shop() {
     <>
       <Menu />
       <Container>
-        <div className="h-full">
-          <div className="grid grid-cols-2 grid-rows-8 gap-3 relative h-full">
+        <div className="h-200vh ">
+          <div className="grid grid-cols-2 grid-rows-12 gap-2 relative h-full">
             <ShopNav />
             <ShopPosterOne />
             <ShopTopSale />

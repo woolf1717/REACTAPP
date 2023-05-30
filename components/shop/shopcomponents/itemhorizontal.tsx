@@ -14,7 +14,7 @@ export default function ItemHorizontal({
   alt,
 }: any) {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row pt-2">
       <div className="w-2/4">
         <Image
           src={src}
@@ -28,11 +28,11 @@ export default function ItemHorizontal({
       <div className="flex flex-col w-2/4 justify-evenly py-2 pl-2">
         <div className="text-xs font-semibold pt-px">{name}</div>
         {/* <div className="text-xxs ">{descr}</div> */}
-        <div className="text-yellow-400 text-xxs pt-px">
+        <div className="text-yellow-400 text-xxxs pt-px">
           <Rateing stars={starsprops} />
         </div>
         <div className="flex justify-between">
-          <div className="text-xs text-red-600 font-semibold">{price} PLN</div>
+          <div className="text-xxs text-red-600 font-semibold">{price} PLN</div>
           {/* <div className="text-xs opacity-75">Sale</div> */}
         </div>
       </div>
