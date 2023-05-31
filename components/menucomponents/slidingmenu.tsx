@@ -10,12 +10,9 @@ export default function SlidingMenu({ menu }: any) {
 
   let outcome;
 
-  if (!menu) {
+  if (menu) {
     outcome = (
-      <div
-        className="h-full opacity-75 bg-blue-950 fixed z-10 pt-14 w-full text-3xl"
-        // onClick={}
-      >
+      <div className="h-full opacity-75 bg-blue-950 fixed z-10 pt-14 w-full text-3xl">
         <div className="text-amber-50 leading-10 pt-0.5 flex flex-col text-center justify-around">
           <Link
             href={"/"}

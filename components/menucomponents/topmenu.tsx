@@ -7,6 +7,11 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useState } from "react";
 
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
+import { flagMenuOn, flagMenuOff } from "../redux/reduxFeatures/menuSlide";
+
 import Search from "../search";
 import SlidingMenu from "./slidingmenu";
 
@@ -24,6 +29,8 @@ export default function TopMenu() {
   const [myAccountActive, setMyAccountActive] = useState<boolean>(false);
   const [mySearchActive, setMySearchActive] = useState<boolean>(false);
   const [menuSlideActive, setMenuSlideActive] = useState<boolean>(true);
+
+  const dispatch = useDispatch();
 
   function handleMenuSlideInit() {
     setMenuSlideActive(!menuSlideActive);
@@ -46,9 +53,7 @@ export default function TopMenu() {
     setMySearchActive(!mySearchActive);
   }
 
-  // if (menuSlideActive){
-
-  // }
+  const menuState = useSelector((state) => state.menu.value);
 
   return (
     <>
@@ -82,7 +87,11 @@ export default function TopMenu() {
               className={`active w-10 text-xl ${
                 !menuSlideActive ? "text-yellow-400" : ""
               }`}
-              onClick={handleMenuSlideInit}
+              onClick={
+                menuState
+                  ? () => dispatch(flagMenuOff())
+                  : () => dispatch(flagMenuOn())
+              }
             >
               {menu}
             </button>
@@ -98,7 +107,7 @@ export default function TopMenu() {
             </div> */}
           </div>{" "}
         </div>
-        {/* </div> */} <SlidingMenu menu={menuSlideActive} />
+        {/* </div> */} <SlidingMenu menu={menuState} />
       </div>
     </>
   );
