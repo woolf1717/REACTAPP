@@ -1,7 +1,5 @@
 ﻿import "../../src/app/globals.css";
 
-import bg from "../../src/pictures/handsome-man.jpg";
-
 import React from "react";
 
 import Image from "next/image";

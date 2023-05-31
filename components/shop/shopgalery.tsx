@@ -3,12 +3,9 @@
 import React from "react";
 
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
-import shirt from "../../src/pictures/products/koszula/Przechwytywanie.jpg";
 
 import shirtTwo from "../../src/pictures/products/koszula2/Przechwytywanie.jpg";
 import shoes from "../../src/pictures/products/buty2/Przechwytywanie.jpg";
-import watch from "../../src/pictures/products/zegarek/2.jpg";
-import spodnie from "../../src/pictures/products/spodnie/2.jpg";
 
 export default function ShopGalery() {
   return (

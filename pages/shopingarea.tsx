@@ -1,10 +1,7 @@
 ﻿import "../src/app/globals.css";
 
-import Link from "next/link";
-
 import Menu from "../components/menu";
-import Empty from "../components/empty";
-import ShopBlank from "../components/shop/shopblank";
+
 import ShopNav from "../components/shop/shopnav";
 import { Container } from "../components/container";
 import ShopPosterOne from "../components/shop/shopposterone";

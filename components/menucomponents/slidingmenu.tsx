@@ -1,14 +1,8 @@
 ﻿import "../../src/app/globals.css";
 
 import React from "react";
-import { useState } from "react";
+
 import Link from "next/link";
-import Image from "next/image";
-
-import Search from "../search";
-import LoginForm from "../menucomponents/loginForm";
-
-import logo from "../src/pictures/logo/logo2.png";
 
 import { useRouter } from "next/router";
 
