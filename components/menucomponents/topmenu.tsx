@@ -18,6 +18,7 @@ import SlidingMenu from "./slidingmenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../../src/pictures/logo/logo2.png";
 
@@ -26,7 +27,7 @@ export default function TopMenu() {
   const dispatch = useDispatch();
   // const myAccountArrowDown = <FontAwesomeIcon icon={faChevronDown} />;
   // const myAccountArrowUp = <FontAwesomeIcon icon={faChevronUp} />;
-
+  const [search, setSearch] = useState<boolean>(false);
   const [mySearchActive, setMySearchActive] = useState<boolean>(false);
 
   const user = (
@@ -40,6 +41,12 @@ export default function TopMenu() {
     setMySearchActive(!mySearchActive);
   }
 
+  function handleSearchInit() {
+    setSearch(false);
+  }
+  function handleSearchAbort() {
+    setSearch(true);
+  }
   const menuState = useSelector((state: any) => state.menu.value);
 
   return (
@@ -54,12 +61,15 @@ export default function TopMenu() {
         </Link>
         {/* <div className=" h-12 text-amber-50 flex justify-end items-center"> */}
         <div className="flex-end flex pt-4">
-          <button
-            onClick={showMoreSearch}
-            className="z-10 w-8 pb-2 text-xl hover:text-yellow-400"
+          <div
+            className={` mr-px inline-block ${
+              mySearchActive ? "z-50 text-yellow-400" : ""
+            }`}
           >
-            <Search />
-          </button>
+            <button onClick={showMoreSearch} className={`active w-8 text-xl`}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+          </div>
           <Link
             href={"/login"}
             className={`active w-8 hover:text-yellow-400 ${
@@ -68,11 +78,13 @@ export default function TopMenu() {
           >
             <button className="w-8 text-xl">{user}</button>
           </Link>
-          <div className="z-50 mr-px inline-block ">
+          <div
+            className={`mr-px inline-block ${
+              menuState ? "z-50 text-yellow-400" : ""
+            }`}
+          >
             <button
-              className={`active w-8 text-xl ${
-                menuState ? "text-yellow-400" : ""
-              }`}
+              className="active w-8 text-xl"
               onClick={
                 menuState
                   ? () => dispatch(flagMenuOff())
@@ -94,6 +106,7 @@ export default function TopMenu() {
           </div>{" "}
         </div>
         <SlidingMenu menu={menuState} />
+        <Search search={mySearchActive} />
       </div>
     </>
   );
