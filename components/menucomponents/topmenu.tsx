@@ -69,22 +69,21 @@ export default function TopMenu() {
         <div className="flex flex-end pt-4">
           <button
             onClick={showMoreSearch}
-            className="hover:text-yellow-400 z-10 pb-2 text-xl"
+            className="hover:text-yellow-400 z-10 pb-2 text-xl w-6"
           >
             <Search />
           </button>
-          <div className="inline-block ml-2 mr-px z-50 ">
-            <Link
-              href={"/login"}
-              className={`hover:text-yellow-400 active w-10 ${
-                router.pathname == "/login" ? "text-yellow-400" : ""
-              }`}
-            >
-              <button className="w-10 text-xl">{user}</button>
-            </Link>
-
+          <Link
+            href={"/login"}
+            className={`hover:text-yellow-400 active w-8 ${
+              router.pathname == "/login" ? "text-yellow-400" : ""
+            }`}
+          >
+            <button className="w-10 text-xl">{user}</button>
+          </Link>
+          <div className="inline-block mr-px z-50 ">
             <button
-              className={`active w-10 text-xl ${
+              className={`active w-8 text-xl ${
                 !menuSlideActive ? "text-yellow-400" : ""
               }`}
               onClick={

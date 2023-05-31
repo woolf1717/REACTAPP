@@ -48,7 +48,7 @@ export default function LoginForm() {
   if (loggedIn) {
     actualForm = (
       <>
-        <div className="relative bg-blue-950 mt-3 p-2 flex flex-col content-between text-sm w-52 -translate-x-20 z-10">
+        <div className="relative bg-blue-950 mt-3 p-2 flex flex-col content-between text-sm w-52 z-10 text-amber-50 ">
           <p className="text-center">Hello user, {loginInput}!!!</p>
           <p className="text-center">
             In case you forgot your password is: {passwordInput} ;D
@@ -68,7 +68,7 @@ export default function LoginForm() {
       <>
         <form
           onSubmit={handleLogIn}
-          className="relative bg-blue-950 mt-3 p-2 flex flex-col content-between text-sm -translate-x-10"
+          className="relative bg-blue-950 mt-3 p-2 flex flex-col content-between text-sm text-amber-50 items-center"
         >
           <label className="py-0.5">Login/Email:</label>
           <input
@@ -88,7 +88,7 @@ export default function LoginForm() {
             required
           />
           <button
-            className="border border-amber-50 mt-2 mx-10 text-xs"
+            className="border border-amber-50 mt-2 mx-10 text-xs w-16 h-6"
             type="submit"
           >
             Log in
