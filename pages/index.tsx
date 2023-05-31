@@ -16,11 +16,15 @@ export default function Home() {
         <Menu />
         <Container>
           <h1 className="text-2xl italic">Projekt CV.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fuga
-            nobis facere laudantium voluptatem officia quidem soluta repellendus
-            corrupti, expedita id exercitationem quos impedit, accusantium
-            facilis quae! Voluptatem, ullam dolore.
+          <p className="mb-2">
+            In this project my main goal, is to prepare to work as Junior Front
+            End Developer. To do so im useing Next.js framework, becaouse it is
+            recomended by REACT. Im going to explore posibilities of Next.js,
+            React, Redux and Tailwind, combined together. I would like to
+            prepare site with posibility to log in, responvie store area with
+            cart capabilities, blog page where its possible to add a post when
+            logged as user. When I find a job as Frontend WebDev i will reuse
+            the project to learn conecting with database.
           </p>
           <Profile />
           <Login />

@@ -16,28 +16,18 @@ import Search from "../search";
 import SlidingMenu from "./slidingmenu";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+// import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import logo from "../../src/pictures/logo/logo2.png";
 
 export default function TopMenu() {
   const router = useRouter();
-  const myAccountArrowDown = <FontAwesomeIcon icon={faChevronDown} />;
-  const myAccountArrowUp = <FontAwesomeIcon icon={faChevronUp} />;
-
-  const [myAccountActive, setMyAccountActive] = useState<boolean>(false);
-  const [mySearchActive, setMySearchActive] = useState<boolean>(false);
-  const [menuSlideActive, setMenuSlideActive] = useState<boolean>(true);
-
   const dispatch = useDispatch();
+  // const myAccountArrowDown = <FontAwesomeIcon icon={faChevronDown} />;
+  // const myAccountArrowUp = <FontAwesomeIcon icon={faChevronUp} />;
 
-  function handleMenuSlideInit() {
-    setMenuSlideActive(!menuSlideActive);
-  }
-  function handleMenuSlideAbort() {
-    setMenuSlideActive(true);
-  }
+  const [mySearchActive, setMySearchActive] = useState<boolean>(false);
 
   const user = (
     <FontAwesomeIcon icon={icon({ name: "user", style: "solid" })} />
@@ -46,9 +36,6 @@ export default function TopMenu() {
     <FontAwesomeIcon icon={icon({ name: "bars", style: "solid" })} />
   );
 
-  function showMoreMyAccount() {
-    setMyAccountActive(!myAccountActive);
-  }
   function showMoreSearch() {
     setMySearchActive(!mySearchActive);
   }
@@ -57,34 +44,34 @@ export default function TopMenu() {
 
   return (
     <>
-      <div className="h-14 bg-blue-950 flex justify-between text-amber-50 ">
+      <div className="flex h-14 justify-between bg-blue-950 text-amber-50 ">
         {" "}
         <Link href={"/"}>
           {" "}
-          <div className="w-40 pt-4 pl-2 ">
+          <div className="w-40 pl-2 pt-4 ">
             <Image src={logo} quality={100} alt="logo" height={50} />
           </div>
         </Link>
         {/* <div className=" h-12 text-amber-50 flex justify-end items-center"> */}
-        <div className="flex flex-end pt-4">
+        <div className="flex-end flex pt-4">
           <button
             onClick={showMoreSearch}
-            className="hover:text-yellow-400 z-10 pb-2 text-xl w-6"
+            className="z-10 w-8 pb-2 text-xl hover:text-yellow-400"
           >
             <Search />
           </button>
           <Link
             href={"/login"}
-            className={`hover:text-yellow-400 active w-8 ${
+            className={`active w-8 hover:text-yellow-400 ${
               router.pathname == "/login" ? "text-yellow-400" : ""
             }`}
           >
-            <button className="w-10 text-xl">{user}</button>
+            <button className="w-8 text-xl">{user}</button>
           </Link>
-          <div className="inline-block mr-px z-50 ">
+          <div className="z-50 mr-px inline-block ">
             <button
               className={`active w-8 text-xl ${
-                !menuSlideActive ? "text-yellow-400" : ""
+                menuState ? "text-yellow-400" : ""
               }`}
               onClick={
                 menuState
@@ -106,7 +93,7 @@ export default function TopMenu() {
             </div> */}
           </div>{" "}
         </div>
-        {/* </div> */} <SlidingMenu menu={menuState} />
+        <SlidingMenu menu={menuState} />
       </div>
     </>
   );
