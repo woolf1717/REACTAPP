@@ -53,7 +53,7 @@ export default function TopMenu() {
     setMySearchActive(!mySearchActive);
   }
 
-  const menuState = useSelector((state) => state.menu.value);
+  const menuState = useSelector((state: any) => state.menu.value);
 
   return (
     <>
