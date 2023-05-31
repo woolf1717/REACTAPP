@@ -48,13 +48,13 @@ export default function LoginForm() {
   if (loggedIn) {
     actualForm = (
       <>
-        <div className="relative bg-blue-950 mt-3 p-2 flex flex-col content-between text-sm  text-amber-50  items-center">
+        <div className="relative mt-3 flex flex-col content-between items-center bg-blue-950 p-2  text-sm  text-amber-50">
           <p className="text-center">Hello user, {loginInput}!!!</p>
           <p className="text-center">
             In case you forgot your password is: {passwordInput} ;D
           </p>
           <button
-            className="border border-amber-50 mt-2 mx-10 text-xs w-16 h-6"
+            className="mx-10 mt-2 h-6 w-16 border border-amber-50 text-xs"
             onClick={handleLogOut}
             type="button"
           >
@@ -68,12 +68,12 @@ export default function LoginForm() {
       <>
         <form
           onSubmit={handleLogIn}
-          className="relative bg-blue-950 mt-3 p-2 flex flex-col content-between text-sm  text-amber-50 items-center"
+          className="relative mt-3 flex flex-col content-between items-center bg-blue-950 p-2  text-sm text-amber-50"
         >
           <label className="py-0.5">Login/Email:</label>
           <input
             onChange={(e) => setLoginInput(e.target.value)}
-            className="h-4 w-36 text-black text-xs pl-0.5"
+            className="h-4 w-36 pl-0.5 text-xs text-black"
             type="text"
             pattern=".{8,}"
             required
@@ -81,14 +81,14 @@ export default function LoginForm() {
           <label className="py-0.5">Password:</label>
           <input
             onChange={(e) => setPasswordInput(e.target.value)}
-            className="h-4 w-36 text-black text-xs pl-0.5"
+            className="h-4 w-36 pl-0.5 text-xs text-black"
             type="password"
             name="fname"
             pattern=".{8,}"
             required
           />
           <button
-            className="border border-amber-50 mt-2 mx-10 text-xs w-16 h-6"
+            className="mx-10 mt-2 h-6 w-16 border border-amber-50 text-xs "
             type="submit"
           >
             Log in
