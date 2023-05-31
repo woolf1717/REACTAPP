@@ -27,7 +27,7 @@ export default function ShopNewOffers() {
           <div className="relative flex flex-row justify-around block ">
             <div className="px-px pb-px pt-2 z-10 w-full">
               <ItemHorizontal
-                src={shirt}
+                src={bag}
                 // width={150}
                 starsprops={5}
                 name={"Bag"}
@@ -38,10 +38,10 @@ export default function ShopNewOffers() {
             </div>
             <div className="px-px pb-px pt-2 z-10 w-full">
               <ItemHorizontal
-                src={watch}
+                src={jacket}
                 // width={250}
                 starsprops={3.5}
-                name={"Men shirt two"}
+                name={"Jacket"}
                 price={1699}
                 alt={""}
                 descr={""}

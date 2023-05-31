@@ -27,9 +27,9 @@ export default function ItemVertical({
           className="pt-px"
         />
       </div>
-      <div className="text-xxs font-semibold text-center">{name}</div>
-      <div className="text-xxs  ">{descr}</div>
-      <div className="text-yellow-400 text-xxs flex flex-row justify-center ">
+      <div className="text-xxxs font-semibold text-center">{name}</div>
+      <div className="text-xxxs  ">{descr}</div>
+      <div className="text-yellow-400 text-xxxs flex flex-row justify-center ">
         {starsprops}
         <Rateing stars={starsprops} />
       </div>
