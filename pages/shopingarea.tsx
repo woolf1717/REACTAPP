@@ -15,24 +15,28 @@ import ShopTopSale from "../components/shop/shoptopsale";
 import ShopNewOffers from "../components/shop/shopnewoffers";
 import ShopGaleryWoman from "../components/shop/shopgalerywoman";
 
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
+
 export default function Shop() {
   return (
     <>
-      <Menu />
-      <Container>
-        <div className="h-200vh ">
-          <div className="grid grid-cols-2 grid-rows-12 gap-2 relative h-full">
-            <ShopNav />
-            <ShopPosterOne />
-            <ShopTopSale />
-            <ShopGalery />
-            <ShopNewOffers />
-            <ShopPosterTwo />
-            <ShopGaleryWoman />
+      <ReduxContainer>
+        <Menu />
+        <Container>
+          <div className="h-200vh ">
+            <div className="grid grid-cols-2 grid-rows-12 gap-2 relative h-full">
+              <ShopNav />
+              <ShopPosterOne />
+              <ShopTopSale />
+              <ShopGalery />
+              <ShopNewOffers />
+              <ShopPosterTwo />
+              <ShopGaleryWoman />
+            </div>
           </div>
-        </div>
-      </Container>
-      <Footer />
+        </Container>
+        <Footer />
+      </ReduxContainer>
     </>
   );
 }

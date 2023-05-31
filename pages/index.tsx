@@ -5,10 +5,10 @@ import Empty from "../components/empty";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 
-import Profile from "../src/components/Profile";
-import Login from "../src/components/Login";
-import ReduxContainer from "@/components/reduxcontainer";
-import ChangeColor from "@/components/ChangeColor";
+import Profile from "../components/redux/reduxComponents/Profile";
+import Login from "../components/redux/reduxComponents/Login";
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
+import ChangeColor from "../components/redux/reduxComponents/ChangeColor";
 
 export default function Home() {
   return (

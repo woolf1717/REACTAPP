@@ -19,13 +19,14 @@ export default function SlidingMenu({ menu }: any) {
 
   if (!menu) {
     outcome = (
-      <div className="h-full opacity-75 bg-blue-950 border-t fixed z-10 mt-14 w-full text-3xl">
+      <div
+        className="h-full opacity-75 bg-blue-950 fixed z-10 pt-14 w-full text-3xl"
+        // onClick={}
+      >
         <div className="text-amber-50 leading-10 pt-0.5 flex flex-col text-center justify-around">
           <Link
             href={"/"}
-            className={`     ${
-              router.pathname == "/" ? "text-yellow-400" : ""
-            }`}
+            className={`  ${router.pathname == "/" ? "text-yellow-400" : ""}`}
           >
             Start
           </Link>

@@ -46,6 +46,10 @@ export default function TopMenu() {
     setMySearchActive(!mySearchActive);
   }
 
+  // if (menuSlideActive){
+
+  // }
+
   return (
     <>
       <div className="h-14 bg-blue-950 flex justify-between text-amber-50 ">
@@ -68,14 +72,16 @@ export default function TopMenu() {
             <Link
               href={"/login"}
               className={`hover:text-yellow-400 active w-10 ${
-                router.pathname == "/login" ? "decoration-1" : ""
+                router.pathname == "/login" ? "text-yellow-400" : ""
               }`}
             >
               <button className="w-10 text-xl">{user}</button>
             </Link>
 
             <button
-              className="active w-10 text-xl"
+              className={`active w-10 text-xl ${
+                !menuSlideActive ? "text-yellow-400" : ""
+              }`}
               onClick={handleMenuSlideInit}
             >
               {menu}

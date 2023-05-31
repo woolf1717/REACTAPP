@@ -7,14 +7,18 @@ import Empty from "../components/empty";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
+
 export default function About() {
   return (
     <>
-      <Menu />
-      <Container>
-        <Empty />
-      </Container>
-      <Footer />
+      <ReduxContainer>
+        <Menu />
+        <Container>
+          <Empty />
+        </Container>
+        <Footer />
+      </ReduxContainer>
     </>
   );
 }
