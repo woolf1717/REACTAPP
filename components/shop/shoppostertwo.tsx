@@ -1,9 +1,11 @@
 ﻿import "../../src/app/globals.css";
 
+import Image from "next/image";
+
 import React from "react";
 
-import Image from "next/image";
 import modelPhoto from "../../src/pictures/woman-RonLach.jpg";
+
 export default function ShopPosterTwo() {
   return (
     <>

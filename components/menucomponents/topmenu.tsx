@@ -1,20 +1,20 @@
 ﻿import "../../src/app/globals.css";
 
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 import React from "react";
 import { useState } from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
 
 import Search from "../search";
-import LoginForm from "./loginForm";
 import SlidingMenu from "./slidingmenu";
-
-import logo from "../../src/pictures/logo/logo2.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+
+import logo from "../../src/pictures/logo/logo2.png";
 
 export default function TopMenu() {
   const router = useRouter();

@@ -1,14 +1,9 @@
 ﻿import "../../src/app/globals.css";
 
-import React from "react";
-
 import Link from "next/link";
-import Image from "next/image";
-
-import Search from "../search";
-import LoginForm from "../menucomponents/loginForm";
 import { useRouter } from "next/router";
-import logo from "../src/pictures/logo/logo2.png";
+
+import React from "react";
 
 export default function BottomMenu() {
   const router = useRouter();

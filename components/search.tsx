@@ -1,9 +1,8 @@
 ﻿import React from "react";
-
 import { useState } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Search() {
   const [search, setSearch] = useState<boolean>(true);

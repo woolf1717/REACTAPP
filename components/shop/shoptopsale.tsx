@@ -1,6 +1,7 @@
 ﻿import "../../src/app/globals.css";
 
 import React from "react";
+
 import ItemVertical from "./shopcomponents/itemvertical";
 
 import shirt from "../../src/pictures/products/koszula/Przechwytywanie.jpg";

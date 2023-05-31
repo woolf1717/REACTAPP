@@ -1,18 +1,18 @@
 ﻿import "../src/app/globals.css";
 
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
+
+import { Container } from "../components/container";
+import Footer from "../components/footer";
 import Menu from "../components/menu";
 
+import ShopGalery from "../components/shop/shopgalery";
+import ShopGaleryWoman from "../components/shop/shopgalerywoman";
 import ShopNav from "../components/shop/shopnav";
-import { Container } from "../components/container";
+import ShopNewOffers from "../components/shop/shopnewoffers";
 import ShopPosterOne from "../components/shop/shopposterone";
 import ShopPosterTwo from "../components/shop/shoppostertwo";
-import ShopGalery from "../components/shop/shopgalery";
-import Footer from "../components/footer";
 import ShopTopSale from "../components/shop/shoptopsale";
-import ShopNewOffers from "../components/shop/shopnewoffers";
-import ShopGaleryWoman from "../components/shop/shopgalerywoman";
-
-import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
 export default function Shop() {
   return (

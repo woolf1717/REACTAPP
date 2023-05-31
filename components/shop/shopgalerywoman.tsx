@@ -3,7 +3,6 @@
 import React from "react";
 
 import ItemVertical from "./shopcomponents/itemvertical";
-import shirt from "../../src/pictures/products/koszula/Przechwytywanie.jpg";
 
 import shirtTwo from "../../src/pictures/products/koszula2/Przechwytywanie.jpg";
 import shoes from "../../src/pictures/products/buty2/Przechwytywanie.jpg";

@@ -1,10 +1,9 @@
 ﻿import "../../src/app/globals.css";
 
-import React from "react";
-
 import Link from "next/link";
-
 import { useRouter } from "next/router";
+
+import React from "react";
 
 export default function SlidingMenu({ menu }: any) {
   const router = useRouter();

@@ -1,8 +1,9 @@
 ﻿import React from "react";
+
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import userReducer from "../reduxFeatures/user";
 import themeReducer from "../reduxFeatures/theme";
+import userReducer from "../reduxFeatures/user";
 
 const store = configureStore({
   reducer: {

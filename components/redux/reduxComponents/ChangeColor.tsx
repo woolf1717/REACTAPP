@@ -1,5 +1,7 @@
 ﻿import React, { useState } from "react";
+
 import { useDispatch } from "react-redux";
+
 import { changeColor } from "../reduxFeatures/theme";
 
 function ChangeColor() {

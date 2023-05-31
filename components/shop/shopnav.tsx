@@ -7,14 +7,14 @@ import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faList,
-  faHouse,
-  faShirt,
-  faLaptop,
-  faClock,
-  faShoePrints,
-  faMapLocationDot,
   faAddressBook,
+  faClock,
+  faHouse,
+  faLaptop,
+  faList,
+  faMapLocationDot,
+  faShirt,
+  faShoePrints,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ShopNav() {

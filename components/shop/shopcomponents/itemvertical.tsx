@@ -1,8 +1,9 @@
 ﻿import "../../../src/app/globals.css";
 
+import Image from "next/image";
+
 import React from "react";
 
-import Image from "next/image";
 import Rateing from "./rateing";
 
 export default function ItemVertical({
