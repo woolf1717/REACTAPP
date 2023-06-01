@@ -3,9 +3,11 @@ import "../src/app/globals.css";
 import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
 import { Container } from "../components/container";
-import Empty from "../components/empty";
+import BlogIntro from "../components/blog/blogintro";
+import BlogPost from "../components/blog/blogpost";
 import Footer from "../components/footer";
 import Menu from "../components/menu";
+import AboutMin from "../components/about/aboutMin";
 
 export default function Blog() {
   return (
@@ -13,8 +15,11 @@ export default function Blog() {
       <ReduxContainer>
         <Menu />
         <Container>
-          {/* <h1>Blog</h1> */}
-          <Empty />
+          <BlogIntro />
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+          <AboutMin />
         </Container>
         <Footer />
       </ReduxContainer>
