@@ -17,14 +17,14 @@ export default function AboutMin() {
                 className="rounded-2xl"
               />
             </div>
-            <p className="m-2 text-right text-sm">
-              Programowaniem zainteresowałem się z w ponieważ wielu z moich
-              dobrych znajomych to ...
-              {/*programiści i zwyczajnie dobrze się z nimi dogaduje. */}
-              {/* Duży wpływ na moją decyzje miała róznież możliwość
-              osiągnięcia dużych zarobków. Na szczęście programownie okazało się
-              pasjonujące, więc nie żałuję decyzji podjęciu nauki. */}{" "}
-            </p>
+            <p>
+              Nazywam się Bartosz Stpiczyński. Zajmuję się programowaniem od
+              ponad roku i muszę przyznać, że im dłużej to robię, tym sprawia mi
+              to większą przyjemność.
+            </p>{" "}
+            <br />
+            <h2 className="font-bold">Ale od początku.</h2>
+            <p>Od zawsze chciałem...</p>
           </div>{" "}
           <div className="pt-px text-end text-xs">Czytam dalej...</div>
         </div>
