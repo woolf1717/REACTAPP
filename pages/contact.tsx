@@ -2,8 +2,8 @@
 
 import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
+import ContactForm from "../components/contact/contact";
 import { Container } from "../components/container";
-import Empty from "../components/empty";
 import Footer from "../components/footer";
 import Menu from "../components/menu";
 
@@ -13,7 +13,7 @@ export default function Contact() {
       <ReduxContainer>
         <Menu />
         <Container>
-          <Empty />
+          <ContactForm />
         </Container>
         <Footer />
       </ReduxContainer>
