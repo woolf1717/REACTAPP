@@ -16,8 +16,10 @@ export default function Login() {
         <Container>
           {/* <Empty /> */}
           <LoginForm />
+          <LoginForm />
+          <LoginForm />
+          <Footer />
         </Container>
-        <Footer />
       </ReduxContainer>
     </>
   );

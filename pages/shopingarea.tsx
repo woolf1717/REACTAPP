@@ -21,7 +21,7 @@ export default function Shop() {
         <Menu />
         <Container>
           <div className="h-200vh ">
-            <div className="grid grid-cols-2 grid-rows-12 gap-2 relative h-full">
+            <div className="relative grid h-full grid-cols-2 grid-rows-12 gap-2">
               <ShopNav />
               <ShopPosterOne />
               <ShopTopSale />
@@ -30,9 +30,9 @@ export default function Shop() {
               <ShopPosterTwo />
               <ShopGaleryWoman />
             </div>
-          </div>
+          </div>{" "}
+          <Footer />
         </Container>
-        <Footer />
       </ReduxContainer>
     </>
   );

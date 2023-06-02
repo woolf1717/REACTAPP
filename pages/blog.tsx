@@ -17,11 +17,9 @@ export default function Blog() {
         <Container>
           <BlogIntro />
           <BlogPost />
-
           <BlogPost />
-          <AboutMin />
+          <AboutMin /> <Footer />
         </Container>
-        <Footer />
       </ReduxContainer>
     </>
   );
