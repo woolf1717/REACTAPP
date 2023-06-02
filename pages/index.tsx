@@ -29,9 +29,10 @@ export default function Home() {
             When I find a job as a Frontend Web Developer, I will reuse the
             project to learn connecting with a database.
           </p>
-          <Profile />
+          {/* <Profile />
           <Login />
-          <ChangeColor /> <Footer />
+          <ChangeColor /> */}
+          <Footer />
         </Container>
       </ReduxContainer>
     </>

@@ -52,7 +52,7 @@ export default function AboutMe() {
                 pokroju. Duży wpływ na moją decyzje o podjęciu tej ścieżki
                 kariery, miała również możliwość osiągnięcia dużych zarobków. Na
                 szczęście programownie okazało się pasjonujące i bynajmniej, nie
-                żałuję decyzji wprowadzniu tego tematu do mojego życia.
+                żałuję decyzji o wprowadzniu tego tematu do mojego życia.
                 Programowanie to idealne narzędzie do zrealizowania celów, które
                 chciałbym osiągnąć. Pozwala na tworzenie produktów, które mogą
                 wygenerować naprawde dużą wartość dla społeczeństwa, stosunkowo
