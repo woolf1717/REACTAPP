@@ -2,8 +2,8 @@
 
 import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
+import AboutMe from "../components/about/aboutme";
 import { Container } from "../components/container";
-import Empty from "../components/empty";
 import Footer from "../components/footer";
 import Menu from "../components/menu";
 
@@ -13,9 +13,9 @@ export default function About() {
       <ReduxContainer>
         <Menu />
         <Container>
-          <Empty />
+          <AboutMe />
+          <Footer />
         </Container>
-        <Footer />
       </ReduxContainer>
     </>
   );
