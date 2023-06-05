@@ -4,7 +4,7 @@ import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
 import { Container } from "../components/container";
 import BlogIntro from "../components/blog/blogintro";
-import BlogPost from "../components/blog/blogpost";
+import BlogArticlesSection from "../components/blog/blogarticlessection";
 import Footer from "../components/footer";
 import Menu from "../components/menu";
 import AboutMin from "../components/about/aboutMin";
@@ -16,8 +16,7 @@ export default function Blog() {
         <Menu />
         <Container>
           <BlogIntro />
-          <BlogPost />
-          <BlogPost />
+          <BlogArticlesSection />
           <AboutMin /> <Footer />
         </Container>
       </ReduxContainer>

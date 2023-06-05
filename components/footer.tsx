@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="absolute mt-10 w-full  pb-2 pr-6 text-center">
         <div className="flex flex-col justify-around  border-t border-amber-300 pt-2">
           <div>
-            <h1>Social</h1>
+            <h1>MySocials</h1>
             <ul>
               <a
                 href="https://www.facebook.com/bartosz.stpiczynski.9/"
@@ -73,26 +73,6 @@ export default function Footer() {
                   Five
                 </a>
               </li>
-            </ul>
-          </div>
-          <div>
-            <h1>Worth to visit</h1>
-            <ul>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-              <li>Five</li>
-            </ul>
-          </div>
-          <div>
-            <h1>Categories</h1>
-            <ul>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-              <li>Five</li>
             </ul>
           </div>
         </div>
