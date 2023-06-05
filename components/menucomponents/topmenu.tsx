@@ -15,8 +15,9 @@ import { flagMenuOn, flagMenuOff } from "../redux/reduxFeatures/menuSlide";
 import Search from "../search";
 import SlidingMenu from "./slidingmenu";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 

@@ -4,10 +4,10 @@ import Menu from "../components/menu";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 
-import Profile from "../components/redux/reduxComponents/Profile";
-import Login from "../components/redux/reduxComponents/Login";
+// import Profile from "../components/redux/reduxComponents/Profile";
+// import Login from "../components/redux/reduxComponents/Login";
 import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
-import ChangeColor from "../components/redux/reduxComponents/ChangeColor";
+// import ChangeColor from "../components/redux/reduxComponents/ChangeColor";
 
 export default function Home() {
   return (
