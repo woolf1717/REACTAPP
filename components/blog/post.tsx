@@ -11,7 +11,9 @@ const Post = ({ post: { title, body, imgUrl, author }, index }: any) => {
       </div>
       <p>{body}</p>
       <div className="info">
-        <h4>Written by: {author}</h4>
+        <h4>
+          Written by: {author} {index}
+        </h4>
         <div className="pt-px text-end text-xs">Read more...</div>
       </div>
     </div>
