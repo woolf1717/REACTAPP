@@ -18,8 +18,8 @@ export default function Login() {
           <LoginForm />
           <LoginForm />
           <LoginForm />
-          <Footer />
-        </Container>
+        </Container>{" "}
+        <Footer />
       </ReduxContainer>
     </>
   );

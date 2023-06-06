@@ -31,8 +31,8 @@ export default function Shop() {
               <ShopGaleryWoman />
             </div>
           </div>{" "}
-          <Footer />
-        </Container>
+        </Container>{" "}
+        <Footer />
       </ReduxContainer>
     </>
   );

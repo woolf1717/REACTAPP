@@ -31,9 +31,9 @@ export default function Home() {
           </p>
           {/* <Profile />
           <Login />
-          <ChangeColor /> */}
-          <Footer />
-        </Container>
+          <ChangeColor /> */}{" "}
+        </Container>{" "}
+        <Footer />
       </ReduxContainer>
     </>
   );

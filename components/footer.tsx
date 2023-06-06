@@ -17,7 +17,7 @@ import logo from "../src/pictures/logo.png";
 export default function Footer() {
   return (
     <>
-      <div className="absolute mt-10 w-full  pb-2 pr-6 text-center">
+      <div className="absolute mt-10 w-full  pb-2 pl-6 pr-6 text-center">
         <div className="flex flex-col justify-around  border-t border-amber-300 pt-2">
           <div>
             <h1>MySocials</h1>

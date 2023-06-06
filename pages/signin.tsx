@@ -14,8 +14,9 @@ export default function SingIn() {
         <Menu />
         <Container>
           <h1>Sign In</h1>
-          <Empty /> <Footer />
+          <Empty />
         </Container>
+        <Footer />
       </ReduxContainer>
     </>
   );

@@ -14,8 +14,8 @@ export default function About() {
         <Menu />
         <Container>
           <AboutMe />
-          <Footer />
-        </Container>
+        </Container>{" "}
+        <Footer />
       </ReduxContainer>
     </>
   );

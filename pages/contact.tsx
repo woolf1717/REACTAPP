@@ -14,8 +14,8 @@ export default function Contact() {
         <Menu />
         <Container>
           <ContactForm />
-          <Footer />
-        </Container>
+        </Container>{" "}
+        <Footer />
       </ReduxContainer>
     </>
   );
