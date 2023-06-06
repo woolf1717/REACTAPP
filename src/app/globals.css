@@ -27,14 +27,4 @@ body {
     )
     rgb(var(--foreground-rgb));
   overflow-x: hidden;
-
-  /* overflow-y: hidden; */
-}
-html,
-body {
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  width: calc(100vw + px);
 }
