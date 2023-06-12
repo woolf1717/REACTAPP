@@ -15,7 +15,7 @@ export default function BlogIntro() {
             przedewszystkim na tematy skierowane dla developerów, jak i osób
             chcących rozwijać się w IT.
           </p>
-          <div className="pt-2 text-end text-xs">Czytam dalej...</div>
+          {/* <div className="pt-2 text-end text-xs">Czytam dalej...</div> */}
         </div>
         <div className="mt-2 overflow-hidden rounded-md bg-neutral-50 p-4">
           <h2 className="font-bold">Najnowsze artykuły:</h2>

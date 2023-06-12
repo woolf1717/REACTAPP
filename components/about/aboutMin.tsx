@@ -1,5 +1,6 @@
 ﻿import "../../src/app/globals.css";
 import Image from "next/image";
+import Link from "next/link";
 
 import me from "../../src/pictures/me/me.svg";
 export default function AboutMin() {
@@ -26,7 +27,9 @@ export default function AboutMin() {
             <h2 className="font-bold">Ale od początku.</h2>
             <p>Od zawsze chciałem...</p>
           </div>{" "}
-          <div className="pt-px text-end text-xs">Czytam dalej...</div>
+          <div className="pt-px text-end text-xs">
+            <Link href={"/about"}>Czytam dalej...</Link>
+          </div>
         </div>
       </div>
     </>
