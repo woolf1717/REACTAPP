@@ -11,7 +11,7 @@ import {
   faClock,
   faHouse,
   faLaptop,
-  faList,
+  faBook,
   faMapLocationDot,
   faShirt,
   faShoePrints,
@@ -22,31 +22,42 @@ export default function ShopNav() {
 
   return (
     <>
-      <div className="bg-neutral-50 text-xs overflow-hidden flex flex-col items-center  pt-px font-semibold rounded-md row-start-3 row-end-5">
-        <div className="flex flex-col h-2/4 w-full">
+      <div className="row-start-3 row-end-5 flex flex-col items-center overflow-hidden  rounded-md bg-neutral-50 py-px text-xs font-semibold">
+        <div className="flex h-2/4 w-full flex-col">
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400  h-1/4 w-full pt-px  ${
-              router.pathname == "/shopingarea" ? "bg-yellow-400" : ""
+            className={`relative h-1/4 w-full pl-2  pt-px hover:bg-yellow-400 active:bg-yellow-400  ${
+              router.pathname == "/shopingarea/" ? "bg-yellow-400" : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2">
-              <FontAwesomeIcon icon={faList} /> Categories
+              <FontAwesomeIcon icon={faHouse} /> Home
             </div>
           </Link>{" "}
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400  h-1/4 w-full  border-t  ${
+            className={`relative h-1/4 w-full border-t  pl-2 hover:bg-yellow-400 active:bg-yellow-400 ${
               router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2 ">
-              <FontAwesomeIcon icon={faHouse} /> Home
+              {" "}
+              <FontAwesomeIcon icon={faBook} /> Books
             </div>
           </Link>
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
+            className={`relative h-1/4 w-full pl-2 hover:bg-yellow-400 active:bg-yellow-400  border-t${
+              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
+            }`}
+          >
+            <div className="absolute top-1/2 -translate-y-1/2">
+              <FontAwesomeIcon icon={faLaptop} /> Courses
+            </div>
+          </Link>
+          <Link
+            href={"/shopingarea"}
+            className={`relative h-1/4 w-full pl-2 hover:bg-yellow-400 active:bg-yellow-400  border-t${
               router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
             }`}
           >
@@ -54,21 +65,11 @@ export default function ShopNav() {
               <FontAwesomeIcon icon={faShirt} /> Clothing
             </div>
           </Link>
-          <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
-            }`}
-          >
-            <div className="absolute top-1/2 -translate-y-1/2">
-              <FontAwesomeIcon icon={faLaptop} /> Electronics
-            </div>
-          </Link>
         </div>
-        <div className="flex flex-col h-2/4 w-full">
+        <div className="flex h-2/4 w-full flex-col">
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
+            className={`relative h-1/4 w-full pl-2 hover:bg-yellow-400 active:bg-yellow-400  border-t${
               router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
             }`}
           >
@@ -78,7 +79,7 @@ export default function ShopNav() {
           </Link>{" "}
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
+            className={`relative h-1/4 w-full pl-2 hover:bg-yellow-400 active:bg-yellow-400  border-t${
               router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
             }`}
           >
@@ -88,7 +89,7 @@ export default function ShopNav() {
           </Link>
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400  h-1/4 w-full border-t ${
+            className={`relative h-1/4 w-full border-t  pl-2 hover:bg-yellow-400 active:bg-yellow-400  ${
               router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
             }`}
           >
@@ -98,7 +99,7 @@ export default function ShopNav() {
           </Link>
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
+            className={`relative h-1/4 w-full pl-2 hover:bg-yellow-400 active:bg-yellow-400 border-t${
               router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
             }`}
           >

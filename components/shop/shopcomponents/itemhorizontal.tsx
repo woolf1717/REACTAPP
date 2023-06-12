@@ -11,6 +11,8 @@ export default function ItemHorizontal({
   starsprops,
   name,
   descr,
+  height,
+  width,
   price,
   alt,
 }: any) {
@@ -19,21 +21,21 @@ export default function ItemHorizontal({
       <div className="w-2/4">
         <Image
           src={src}
-          // width={1000}
-          // height={500}
+          width={width}
+          height={height}
           quality={75}
           alt={alt}
           className="pt-px"
         />
       </div>
-      <div className="flex flex-col w-2/4 justify-evenly py-2 pl-2">
-        <div className="text-xs font-semibold pt-px">{name}</div>
+      <div className="flex w-2/4 flex-col justify-evenly py-2 pl-2">
+        <div className="pt-px text-xs font-semibold">{name}</div>
         {/* <div className="text-xxs ">{descr}</div> */}
-        <div className="text-yellow-400 text-xxxs pt-px">
+        <div className="pt-px text-xxxs text-yellow-400">
           <Rateing stars={starsprops} />
         </div>
         <div className="flex justify-between">
-          <div className="text-xxs text-red-600 font-semibold">{price} PLN</div>
+          <div className="text-xxs font-semibold text-red-600">{price} PLN</div>
           {/* <div className="text-xs opacity-75">Sale</div> */}
         </div>
       </div>

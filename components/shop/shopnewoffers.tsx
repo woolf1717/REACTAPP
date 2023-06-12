@@ -9,18 +9,19 @@ import ItemHorizontal from "./shopcomponents/itemhorizontal";
 export default function ShopNewOffers() {
   return (
     <>
-      <div className="bg-neutral-50  px-2 pt-2 rounded-md col-start-1 col-end-3 row-start-7 row-end-9">
-        <div className="flex justify-between items-center">
-          <h1 className="uppercase text-xs font-bold ">NewOffer</h1>
+      <div className="col-start-1  col-end-3 row-start-7 row-end-9 rounded-md bg-neutral-50 px-2 pt-2">
+        <div className="flex items-center justify-between">
+          <h1 className="text-xs font-bold uppercase ">NewOffer</h1>
           <h2 className=" text-xxs font-semibold  text-yellow-400">More</h2>
         </div>
         <div>
           {" "}
-          <div className="relative flex flex-row justify-around block ">
-            <div className="px-px pb-px pt-2 z-10 w-full">
+          <div className="relative block flex flex-row justify-around ">
+            <div className="z-10 w-full px-px pb-px pt-2">
               <ItemHorizontal
                 src={bag}
-                // width={150}
+                width={75}
+                height={75}
                 starsprops={5}
                 name={"Bag"}
                 price={2200}
@@ -28,10 +29,11 @@ export default function ShopNewOffers() {
                 descr={""}
               />
             </div>
-            <div className="px-px pb-px pt-2 z-10 w-full">
+            <div className="z-10 w-full px-px pb-px pt-2">
               <ItemHorizontal
                 src={jacket}
-                // width={250}
+                width={75}
+                height={75}
                 starsprops={3.5}
                 name={"Jacket"}
                 price={1699}
