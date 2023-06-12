@@ -1,7 +1,4 @@
-﻿4.BLOG. Make dir with a few articles and create actual UI that allows to read these articles. (i want them to be sorted by date)
-
-6.NEWSLETTER. Create form for people interested in newsfeed about programing and buisnes.
-7.SHOP. Change shop products for ones with actual products made by you. Figure out what kind of content you want to provide and list your ideas.(make some branding and pursue creating it ;P)
+﻿7.SHOP. Change shop products for ones with actual products made by you. Figure out what kind of content you want to provide and list your ideas.(make some branding and pursue creating it ;P)
 8.SHOP. Add possibility to cart products you are intrested in.
 9.CLEAN CODE. Develop system to keep your code clean.
 10.SHOP. Make a system that allows you to "pay" and "deploy" resouces.
@@ -16,3 +13,5 @@ Done:
 2.FOOTER. Add categories: social, woth to know, categories(hyperlink to certain dir). 3.
 
 5.BLOG. Make pages scheme that allows you to look into old articles. (like page <| [1][2][3] |>....)
+4.BLOG. Make dir with a few articles and create actual UI that allows to read these articles. (i want them to be sorted by date)
+6.NEWSLETTER. Create form for people interested in newsfeed about programing and buisnes.
