@@ -13,7 +13,7 @@ const BlogArticlesSection = () => {
   const [inputValue, setInputValue] = useState();
   const blogPosts = [
     {
-      title: "1. JAVASCRIPT",
+      title: "17. JAVASCRIPT",
       body: `JavaScript is the world most popular
         lightweight, interpreted compiled programming
         language. It is also known as scripting
@@ -27,7 +27,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
     },
     {
-      title: "2. Data Structure ",
+      title: "16. Data Structure ",
       body: `There are many real-life examples of
         a stack. Consider an example of plates stacked
         over one another in the canteen. The plate
@@ -42,7 +42,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
     },
     {
-      title: "3. Algorithm",
+      title: "15. Algorithm",
       body: `The word Algorithm means “a process
         or set of rules to be followed in calculations
         or other problem-solving operations”. Therefore
@@ -55,7 +55,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
     },
     {
-      title: "4. Computer Network",
+      title: "14. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/
@@ -70,7 +70,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
     },
     {
-      title: "5. JAVASCRIPT",
+      title: "13. JAVASCRIPT",
       body: `JavaScript is the world most popular
         lightweight, interpreted compiled programming
         language. It is also known as scripting
@@ -84,7 +84,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
     },
     {
-      title: "6. Data Structure ",
+      title: "12. Data Structure ",
       body: `There are many real-life examples of
         a stack. Consider an example of plates stacked
         over one another in the canteen. The plate
@@ -99,7 +99,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
     },
     {
-      title: "7. Algorithm",
+      title: "11. Algorithm",
       body: `The word Algorithm means “a process
         or set of rules to be followed in calculations
         or other problem-solving operations”. Therefore
@@ -112,7 +112,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
     },
     {
-      title: "8. Computer Network",
+      title: "10. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/
@@ -141,7 +141,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
     },
     {
-      title: "10. Data Structure ",
+      title: "8. Data Structure ",
       body: `There are many real-life examples of
         a stack. Consider an example of plates stacked
         over one another in the canteen. The plate
@@ -156,7 +156,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
     },
     {
-      title: "11. Algorithm",
+      title: "7. Algorithm",
       body: `The word Algorithm means “a process
         or set of rules to be followed in calculations
         or other problem-solving operations”. Therefore
@@ -169,7 +169,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
     },
     {
-      title: "12. Computer Network",
+      title: "6. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/
@@ -184,7 +184,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
     },
     {
-      title: "13. Computer Network",
+      title: "5. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/
@@ -199,7 +199,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
     },
     {
-      title: "14. Computer Network",
+      title: "4. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/
@@ -214,7 +214,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
     },
     {
-      title: "15. Computer Network",
+      title: "3. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/
@@ -229,7 +229,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
     },
     {
-      title: "16. Computer Network",
+      title: "2. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/
@@ -244,7 +244,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
     },
     {
-      title: "17. Computer Network",
+      title: "1. Computer Network",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/

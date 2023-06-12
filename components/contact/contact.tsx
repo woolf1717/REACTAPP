@@ -7,7 +7,7 @@ export default function ContactForm() {
     <>
       <div className="overflow-hidden rounded-md bg-neutral-50 p-4">
         <h1 className="font-bold">
-          If you want to contact me feel free to use this form, or email
+          If you want to contact me feel free to use this form, or email me
           office@devyourweb.pl.{" "}
         </h1>
         <form>
@@ -40,7 +40,7 @@ export default function ContactForm() {
             <br />
             <input
               type="text"
-              className="w-full border-2 border-neutral-500/25"
+              className="h-24 w-full border-2 border-neutral-500/25"
             />
           </p>
           <p className="">

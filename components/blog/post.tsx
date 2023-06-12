@@ -33,7 +33,7 @@ const PostShort = ({ post: { title, body, imgUrl, author }, index }: any) => {
       <div className="relative h-48 w-full">
         <Image className="image " src={imgUrl} alt="post" fill={true} />
       </div>
-      <p>{body}...</p>
+      <p>{body}</p>
       <div className="info">
         <br />
         <h4>

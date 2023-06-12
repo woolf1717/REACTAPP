@@ -3,10 +3,11 @@
 import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
 import { Container } from "../components/container";
-import Empty from "../components/empty";
+
 import Footer from "../components/footer";
 import Menu from "../components/menu";
 import LoginForm from "../components/menucomponents/loginForm";
+import Newsletter from "../components/newsletter";
 
 export default function Login() {
   return (
@@ -16,8 +17,7 @@ export default function Login() {
         <Container>
           {/* <Empty /> */}
           <LoginForm />
-          <LoginForm />
-          <LoginForm />
+          <Newsletter />
         </Container>{" "}
         <Footer />
       </ReduxContainer>
