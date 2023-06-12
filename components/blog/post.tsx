@@ -19,7 +19,7 @@ const PostShort = ({ post: { title, body, imgUrl, author }, index }: any) => {
           Written by: {author} {index}
         </h4>
         <div
-          className="pt-px text-end text-xs"
+          className="pt-px text-end text-xs text-sky-600"
           onClick={() => setPostVisiblity(true)}
         >
           Read more...
@@ -40,7 +40,7 @@ const PostShort = ({ post: { title, body, imgUrl, author }, index }: any) => {
           Written by: {author} {index}
         </h4>
         <div
-          className="pt-px text-end text-xs"
+          className="pt-px text-end text-xs text-sky-600"
           onClick={() => setPostVisiblity(false)}
         >
           See less...

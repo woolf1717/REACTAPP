@@ -10,10 +10,10 @@ export default function BlogIntro() {
             Strefa ta jest poświęcona blogowaniu.
           </h2>
           <p className="text-sm">
-            Można tu znaleźć wiele ciekawych artyków związanych z programowaniem
-            i szeroko pojętą branżą IT. Można tu znaleźć informację na
-            przedewszystkim na tematy skierowane dla developerów, jak i osób
-            chcących rozwijać się w IT.
+            W tej zakładce zamierzam umieszczać artykuły na temat szeroko
+            pojętej branży IT. Można tu znaleźć informacje przedewszystkim na
+            tematy skierowane dla developerów, jak i osób chcących rozwijać się
+            w IT. Zapraszam do zapoznania się z materiałami oraz do dyskusji.
           </p>
           {/* <div className="pt-2 text-end text-xs">Czytam dalej...</div> */}
         </div>

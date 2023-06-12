@@ -27,7 +27,7 @@ export default function AboutMin() {
             <h2 className="font-bold">Ale od początku.</h2>
             <p>Od zawsze chciałem...</p>
           </div>{" "}
-          <div className="pt-px text-end text-xs">
+          <div className="pt-px text-end text-xs text-sky-600">
             <Link href={"/about"}>Czytam dalej...</Link>
           </div>
         </div>
