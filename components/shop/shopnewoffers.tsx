@@ -2,6 +2,9 @@
 
 import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+
 import bag from "../../src/pictures/products/torba/Przechwytywanie.jpg";
 import jacket from "../../src/pictures/products/kurtka/Przechwytywanie.jpg";
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
@@ -10,13 +13,14 @@ export default function ShopNewOffers() {
   return (
     <>
       <div className="col-start-1  col-end-3 row-start-7 row-end-9 rounded-md bg-neutral-50 px-2 pt-2">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between px-2">
           <h1 className="text-xs font-bold uppercase ">NewOffer</h1>
           <h2 className=" text-xxs font-semibold  text-yellow-400">More</h2>
         </div>
         <div>
           {" "}
-          <div className="relative block flex flex-row justify-around ">
+          <div className="relative flex flex-row items-center justify-around pt-2">
+            <FontAwesomeIcon icon={faCaretLeft} />
             <div className="z-10 w-full px-px pb-px pt-2">
               <ItemHorizontal
                 src={bag}
@@ -41,6 +45,7 @@ export default function ShopNewOffers() {
                 descr={""}
               />
             </div>
+            <FontAwesomeIcon icon={faCaretRight} />
             {/* <div className="px-2 pb-px pt-2">
               <ItemHorizontal
                 src={watch}
