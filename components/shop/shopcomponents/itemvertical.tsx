@@ -18,14 +18,14 @@ export default function ItemVertical({
 }: any) {
   return (
     <>
-      <div>
+      <div className="">
         <Image
           src={src}
           width={width}
           height={height}
           quality={75}
           alt={alt}
-          className="pt-px"
+          className="relative  left-1/2 -translate-x-2/4 pt-px"
         />
       </div>
       <div className="text-center text-xxxs font-semibold">{name}</div>

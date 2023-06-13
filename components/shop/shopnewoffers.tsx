@@ -9,7 +9,30 @@ import bag from "../../src/pictures/products/torba/Przechwytywanie.jpg";
 import jacket from "../../src/pictures/products/kurtka/Przechwytywanie.jpg";
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
 
+// https://www.npmjs.com/package/react-multi-carousel
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 export default function ShopNewOffers() {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 4,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 2,
+    },
+  };
   return (
     <>
       <div className="col-start-1  col-end-3 row-start-7 row-end-9 rounded-md bg-neutral-50 px-2 pt-2">
@@ -17,11 +40,14 @@ export default function ShopNewOffers() {
           <h1 className="text-xs font-bold uppercase ">NewOffer</h1>
           <h2 className=" text-xxs font-semibold  text-yellow-400">More</h2>
         </div>
-        <div>
+
+        <div className="w-full pt-3">
           {" "}
-          <div className="relative flex flex-row items-center justify-around pt-2">
-            <FontAwesomeIcon icon={faCaretLeft} />
-            <div className="z-10 w-full px-px pb-px pt-2">
+          <Carousel
+            responsive={responsive}
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+          >
+            <div className="w-full">
               <ItemHorizontal
                 src={bag}
                 width={75}
@@ -33,7 +59,7 @@ export default function ShopNewOffers() {
                 descr={""}
               />
             </div>
-            <div className="z-10 w-full px-px pb-px pt-2">
+            <div>
               <ItemHorizontal
                 src={jacket}
                 width={75}
@@ -45,28 +71,43 @@ export default function ShopNewOffers() {
                 descr={""}
               />
             </div>
-            <FontAwesomeIcon icon={faCaretRight} />
-            {/* <div className="px-2 pb-px pt-2">
+            <div>
               <ItemHorizontal
-                src={watch}
-                starsprops={4.5}
-                name={"Men watch"}
-                price={1799}
+                src={jacket}
+                width={75}
+                height={75}
+                starsprops={3.5}
+                name={"Jacket"}
+                price={1699}
                 alt={""}
                 descr={""}
               />
             </div>
-            <div className="px-2 pb-px pt-2">
+            <div>
               <ItemHorizontal
-                src={trousers}
-                starsprops={4}
-                name={"Men trousers"}
-                price={600}
+                src={jacket}
+                width={75}
+                height={75}
+                starsprops={3.5}
+                name={"Jacket"}
+                price={1699}
                 alt={""}
                 descr={""}
               />
-            </div> */}
-          </div>
+            </div>
+            <div>
+              <ItemHorizontal
+                src={jacket}
+                width={75}
+                height={75}
+                starsprops={3.5}
+                name={"Jacket"}
+                price={1699}
+                alt={""}
+                descr={""}
+              />
+            </div>
+          </Carousel>
         </div>
       </div>
     </>

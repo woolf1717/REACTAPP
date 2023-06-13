@@ -36,7 +36,7 @@ export default function Newsletter() {
               />
 
               <div className=" relative flex w-full justify-center">
-                <div className="mb-2 mt-4 inline-block w-24 border border-black text-center text-center">
+                <div className="mb-2 mt-4 inline-block w-24 border border-black text-center">
                   Sign up!
                 </div>
               </div>
