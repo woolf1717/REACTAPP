@@ -15,7 +15,6 @@ export default function Login() {
       <ReduxContainer>
         <Menu />
         <Container>
-          {/* <Empty /> */}
           <LoginForm />
           <Newsletter />
         </Container>{" "}

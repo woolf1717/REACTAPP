@@ -2,6 +2,9 @@
 
 import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+
 import bag from "../../src/pictures/products/torba/Przechwytywanie.jpg";
 import jacket from "../../src/pictures/products/kurtka/Przechwytywanie.jpg";
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
@@ -10,7 +13,10 @@ import ItemHorizontal from "./shopcomponents/itemhorizontal";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-export default function ShopNewOffers() {
+import Image from "next/image";
+import src from "../../src/Books/1.svg";
+
+export default function ShopBooks() {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -32,13 +38,13 @@ export default function ShopNewOffers() {
   };
   return (
     <>
-      <div className="col-start-1  col-end-3 row-start-7 row-end-9 rounded-md bg-neutral-50 px-2 pt-2">
+      <div className="rounded-md bg-neutral-50 px-2 pt-2">
         <div className="flex items-center justify-between px-2">
-          <h1 className="pt-2 text-xs font-bold uppercase">NewOffer</h1>
+          <h1 className="text-xs font-bold uppercase ">NewOffer</h1>
           <h2 className=" text-xxs font-semibold  text-yellow-400">More</h2>
         </div>
 
-        <div className="w-full pt-3">
+        <div className="w-full py-3">
           {" "}
           <Carousel
             responsive={responsive}

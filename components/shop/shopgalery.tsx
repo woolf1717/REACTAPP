@@ -38,7 +38,9 @@ export default function ShopGalery() {
     <>
       <div className="col-start-1  col-end-3 row-start-5 row-end-7 rounded-md bg-neutral-50 px-2 pt-2">
         <div className="flex items-center justify-between px-2 ">
-          <h1 className="text-xs font-bold uppercase">new products in sales</h1>
+          <h1 className="pt-2 text-xs font-bold uppercase">
+            new products in sales
+          </h1>
           <h2 className=" text-xxs font-semibold  text-yellow-400">More</h2>
         </div>{" "}
         <div className="w-full pt-3">

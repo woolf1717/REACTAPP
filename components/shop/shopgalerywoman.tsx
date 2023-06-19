@@ -48,7 +48,7 @@ export default function ShopGaleryWoman() {
           </h1>
           <h2 className=" text-xs font-semibold  text-yellow-400">More</h2>
         </div>
-        <div>
+        <div className="pt-2">
           <Carousel
             responsive={responsive}
             removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -186,14 +186,14 @@ export default function ShopGaleryWoman() {
           </Carousel>
         </div>
       </div>
-      <Image
+      {/* <Image
         src={src}
         width={50}
         height={50}
         quality={75}
         alt={"opis"}
         className="pt-px"
-      />
+      /> */}
     </>
   );
 }

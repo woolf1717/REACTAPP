@@ -41,7 +41,7 @@ export default function ShopTopSale() {
           <h1 className="text-xxs font-bold uppercase ">hot sale</h1>
           <h2 className=" text-xxs font-semibold  text-yellow-400">More</h2>
         </div>{" "}
-        <div className="h-full text-xxs">
+        <div className="text-xxspt h-full pt-2">
           <Carousel
             responsive={responsive}
             removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -152,55 +152,7 @@ export default function ShopTopSale() {
             </div>
           </Carousel>
         </div>
-        {/* <div className="flex flex-row items-center pt-2">
-          <FontAwesomeIcon
-            icon={faCaretLeft}
-            onClick={() => {
-              setArticleVisible(articleVisible - 1);
-            }}
-          />
-          <div className=" flex flex-row overflow-hidden pt-px">
-            {" "}
-            <div className="min-w-full px-2">
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
-            </div>
-            <div className="min-w-full px-2">
-              <ItemVertical
-                src={trousers}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={1}
-              />
-            </div>
-          </div>
-          <FontAwesomeIcon
-            icon={faCaretRight}
-            onClick={() => {
-              setArticleVisible(articleVisible + 1);
-            }}
-          />
-        </div> */}
       </div>
-      <Carousel responsive={responsive}>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-      </Carousel>
-      ;
     </>
   );
 }
