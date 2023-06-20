@@ -35,10 +35,7 @@ export default function ShopGalery() {
   };
   const itemOne = itemsList[2];
   const itemTwo = itemsList[3];
-  const itemThree = itemsList[3];
-  const itemFour = itemsList[3];
-  const itemFive = itemsList[3];
-  const itemSix = itemsList[3];
+  const itemThree = itemsList[4];
   return (
     <>
       <div className="col-start-1  col-end-3 row-start-5 row-end-7 rounded-md bg-neutral-50 px-2 pt-2">
@@ -58,16 +55,10 @@ export default function ShopGalery() {
               <ItemHorizontal {...itemOne} />
             </div>
             <div>
-              <ItemHorizontal {...itemOne} />
+              <ItemHorizontal {...itemTwo} />
             </div>
             <div>
-              <ItemHorizontal {...itemOne} />
-            </div>
-            <div>
-              <ItemHorizontal {...itemOne} />
-            </div>
-            <div>
-              <ItemHorizontal {...itemOne} />
+              <ItemHorizontal {...itemThree} />
             </div>
           </Carousel>
         </div>

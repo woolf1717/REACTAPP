@@ -10,7 +10,6 @@ export default function ItemHorizontal({
   src,
   starsprops,
   name,
-  descr,
   height,
   width,
   price,

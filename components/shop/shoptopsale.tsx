@@ -32,12 +32,9 @@ export default function ShopTopSale() {
       items: 1,
     },
   };
-  const itemOne = itemsList[2];
-  const itemTwo = itemsList[3];
-  const itemThree = itemsList[3];
-  const itemFour = itemsList[3];
-  const itemFive = itemsList[3];
-  const itemSix = itemsList[3];
+  const itemOne = itemsList[0];
+  const itemTwo = itemsList[1];
+
   return (
     <>
       <div className="row-start-3  row-end-5 overflow-hidden rounded-md bg-neutral-50 pt-px">
@@ -55,18 +52,6 @@ export default function ShopTopSale() {
             </div>
             <div>
               <ItemVertical {...itemTwo} />
-            </div>
-            <div>
-              <ItemVertical {...itemThree} />
-            </div>
-            <div>
-              <ItemVertical {...itemFour} />
-            </div>
-            <div>
-              <ItemVertical {...itemFive} />
-            </div>
-            <div>
-              <ItemVertical {...itemSix} />
             </div>
           </Carousel>
         </div>

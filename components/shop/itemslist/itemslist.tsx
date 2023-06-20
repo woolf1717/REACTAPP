@@ -1,15 +1,41 @@
-﻿import bag from "../../../src/pictures/products/torba/Przechwytywanie.jpg";
-import jacket from "../../../src/pictures/products/kurtka/Przechwytywanie.jpg";
-import shirt from "../../../src/pictures/products/koszula/Przechwytywanie.jpg";
-import trousers from "../../../src/pictures/products/spodnie/2.jpg";
-import shirtTwo from "../../../src/pictures/products/koszula2/Przechwytywanie.jpg";
-import shoes from "../../../src/pictures/products/buty2/Przechwytywanie.jpg";
-import watch from "../../../src/pictures/products/zegarek/2.jpg";
+﻿import bagSrc from "../../../src/pictures/products/bag/1.jpg";
+import bagPhotoOne from "../../../src/pictures/products/bag/2.jpg";
+import bagPhotoTwo from "../../../src/pictures/products/bag/3.jpg";
+import bagPhotoThree from "../../../src/pictures/products/bag/4.jpg";
+
+import jacketSrc from "../../../src/pictures/products/jacket/1.jpg";
+import jacketPhotoOne from "../../../src/pictures/products/jacket/2.jpg";
+import jacketPhotoTwo from "../../../src/pictures/products/jacket/3.jpg";
+import jacketPhotoThree from "../../../src/pictures/products/jacket/4.jpg";
+
+import shirtSrc from "../../../src/pictures/products/shirt/1.jpg";
+import shirtPhotoOne from "../../../src/pictures/products/shirt/2.jpg";
+import shirtPhotoTwo from "../../../src/pictures/products/shirt/3.jpg";
+import shirtPhotoThree from "../../../src/pictures/products/shirt/4.jpg";
+
+import shirtTwoSrc from "../../../src/pictures/products/shirtTwo/1.jpg";
+import shirtTwoPhotoOne from "../../../src/pictures/products/shirtTwo/2.jpg";
+
+import shoesSrc from "../../../src/pictures/products/shoes/1.jpg";
+import shoesPhoto from "../../../src/pictures/products/shoes/2.jpg";
+
+import shoesTwoSrc from "../../../src/pictures/products/shoesTwo/1.jpg";
+import shoesTwoPhoto from "../../../src/pictures/products/shoesTwo/2.jpg";
+
+import trousersSrc from "../../../src/pictures/products/trousers/1.jpg";
+import trousersPhotoOne from "../../../src/pictures/products/trousers/2.jpg";
+
+import watchSrc from "../../../src/pictures/products/watch/1.jpg";
+import watchPhotoOne from "../../../src/pictures/products/watch/2.jpg";
+import watchPhotoTwo from "../../../src/pictures/products/watch/3.jpg";
 
 const itemsList = [
   {
     id: 1,
-    src: bag,
+    src: bagSrc,
+    photoOne: bagPhotoOne,
+    photoTwo: bagPhotoTwo,
+    photoThree: bagPhotoThree,
     starsprops: 5,
     name: "Bag",
     price: 2200,
@@ -19,19 +45,25 @@ const itemsList = [
   },
   {
     id: 2,
-    src: jacket,
-    starsprops: 3.5,
+    src: jacketSrc,
+    photoOne: jacketPhotoOne,
+    photoTwo: jacketPhotoTwo,
+    photoThree: jacketPhotoThree,
+    starsprops: 5,
     name: "Jacket",
-    price: 1699,
-    count: 4,
+    price: 1500,
+    count: 4.5,
     alt: "",
     descr: "",
   },
   {
     id: 3,
-    src: shirt,
+    src: shirtSrc,
+    photoOne: shirtPhotoOne,
+    photoTwo: shirtPhotoTwo,
+    photoThree: shirtPhotoThree,
     starsprops: 3.5,
-    name: "Jacket",
+    name: "Shirt",
     price: 1699,
     count: 4,
     alt: "",
@@ -39,9 +71,10 @@ const itemsList = [
   },
   {
     id: 4,
-    src: trousers,
+    src: shirtTwoSrc,
+    photo: shirtTwoPhotoOne,
     starsprops: 3.5,
-    name: "Jacket",
+    name: "ShirtTwo",
     price: 1699,
     count: 4,
     alt: "",
@@ -49,9 +82,10 @@ const itemsList = [
   },
   {
     id: 5,
-    src: shirtTwo,
+    src: shoesSrc,
+    photo: shoesPhoto,
     starsprops: 3.5,
-    name: "Jacket",
+    name: "Shoes",
     price: 1699,
     count: 4,
     alt: "",
@@ -59,9 +93,10 @@ const itemsList = [
   },
   {
     id: 6,
-    src: shoes,
+    src: shoesTwoSrc,
+    photo: shoesTwoPhoto,
     starsprops: 3.5,
-    name: "Jacket",
+    name: "ShoesTwo",
     price: 1699,
     count: 4,
     alt: "",
@@ -69,9 +104,22 @@ const itemsList = [
   },
   {
     id: 7,
-    src: watch,
+    src: trousersSrc,
+    photo: trousersPhotoOne,
     starsprops: 3.5,
-    name: "Jacket",
+    name: "Trousers",
+    price: 1699,
+    count: 4,
+    alt: "",
+    descr: "",
+  },
+  {
+    id: 8,
+    src: watchSrc,
+    photoOne: watchPhotoOne,
+    photoTwo: watchPhotoTwo,
+    starsprops: 3.5,
+    name: "Watch",
     price: 1699,
     count: 4,
     alt: "",

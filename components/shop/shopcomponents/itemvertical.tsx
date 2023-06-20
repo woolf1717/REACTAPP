@@ -8,8 +8,6 @@ import Rateing from "./rateing";
 
 export default function ItemVertical({
   src,
-  width,
-  height,
   alt,
   name,
   descr,

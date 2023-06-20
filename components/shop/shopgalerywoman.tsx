@@ -36,12 +36,11 @@ export default function ShopGaleryWoman() {
       items: 4,
     },
   };
-  const itemOne = itemsList[2];
-  const itemTwo = itemsList[3];
+  const itemOne = itemsList[7];
+  const itemTwo = itemsList[2];
   const itemThree = itemsList[3];
-  const itemFour = itemsList[3];
-  const itemFive = itemsList[3];
-  const itemSix = itemsList[3];
+  const itemFour = itemsList[4];
+
   return (
     <>
       <div className="relative col-start-1 col-end-3 row-start-11 row-end-13 flex flex-col overflow-hidden rounded-md bg-neutral-50 p-2 ">
@@ -60,22 +59,13 @@ export default function ShopGaleryWoman() {
               <ItemVertical {...itemOne} />
             </div>
             <div>
-              <ItemVertical {...itemOne} />
+              <ItemVertical {...itemTwo} />
             </div>
             <div>
-              <ItemVertical {...itemOne} />
+              <ItemVertical {...itemThree} />
             </div>
             <div>
-              <ItemVertical {...itemOne} />
-            </div>
-            <div>
-              <ItemVertical {...itemOne} />
-            </div>
-            <div>
-              <ItemVertical {...itemOne} />
-            </div>
-            <div>
-              <ItemVertical {...itemOne} />
+              <ItemVertical {...itemFour} />
             </div>
           </Carousel>
         </div>
