@@ -4,16 +4,15 @@ import React from "react";
 
 import ItemVertical from "./shopcomponents/itemvertical";
 
-import shirt from "../../src/pictures/products/koszula/Przechwytywanie.jpg";
-import trousers from "../../src/pictures/products/spodnie/2.jpg";
+import itemsList from "../shop/itemslist/itemslist";
 
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import { useState } from "react";
+
 export default function ShopTopSale() {
-  const [articleVisible, setArticleVisible] = useState(0);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -33,7 +32,12 @@ export default function ShopTopSale() {
       items: 1,
     },
   };
-
+  const itemOne = itemsList[2];
+  const itemTwo = itemsList[3];
+  const itemThree = itemsList[3];
+  const itemFour = itemsList[3];
+  const itemFive = itemsList[3];
+  const itemSix = itemsList[3];
   return (
     <>
       <div className="row-start-3  row-end-5 overflow-hidden rounded-md bg-neutral-50 pt-px">
@@ -47,108 +51,22 @@ export default function ShopTopSale() {
             removeArrowOnDeviceType={["tablet", "mobile"]}
           >
             <div>
-              {" "}
-              <ItemVertical
-                src={trousers}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={1}
-              />
+              <ItemVertical {...itemOne} />
             </div>
             <div>
-              {" "}
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
+              <ItemVertical {...itemTwo} />
             </div>
             <div>
-              {" "}
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
+              <ItemVertical {...itemThree} />
             </div>
             <div>
-              {" "}
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
+              <ItemVertical {...itemFour} />
             </div>
             <div>
-              {" "}
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
+              <ItemVertical {...itemFive} />
             </div>
             <div>
-              {" "}
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
-            </div>
-            <div>
-              {" "}
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
-            </div>
-            <div>
-              {" "}
-              <ItemVertical
-                src={shirt}
-                width={75}
-                height={75}
-                starsprops={2.5}
-                name={"Men shirt"}
-                price={500}
-                alt={""}
-                id={0}
-              />
+              <ItemVertical {...itemSix} />
             </div>
           </Carousel>
         </div>

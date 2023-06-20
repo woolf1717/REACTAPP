@@ -5,10 +5,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
-import ItemHorizontal from "./shopcomponents/itemhorizontal";
+import itemsList from "../shop/itemslist/itemslist";
 
-import shirtTwo from "../../src/pictures/products/koszula2/Przechwytywanie.jpg";
-import shoes from "../../src/pictures/products/buty2/Przechwytywanie.jpg";
+import ItemHorizontal from "./shopcomponents/itemhorizontal";
 
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
@@ -34,6 +33,12 @@ export default function ShopGalery() {
       items: 2,
     },
   };
+  const itemOne = itemsList[2];
+  const itemTwo = itemsList[3];
+  const itemThree = itemsList[3];
+  const itemFour = itemsList[3];
+  const itemFive = itemsList[3];
+  const itemSix = itemsList[3];
   return (
     <>
       <div className="col-start-1  col-end-3 row-start-5 row-end-7 rounded-md bg-neutral-50 px-2 pt-2">
@@ -50,64 +55,19 @@ export default function ShopGalery() {
             removeArrowOnDeviceType={["tablet", "mobile"]}
           >
             <div className="w-full">
-              <ItemHorizontal
-                src={shoes}
-                width={75}
-                height={75}
-                starsprops={5}
-                name={"Bag"}
-                price={2200}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemOne} />
             </div>
             <div>
-              <ItemHorizontal
-                src={shirtTwo}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemOne} />
             </div>
             <div>
-              <ItemHorizontal
-                src={shirtTwo}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemOne} />
             </div>
             <div>
-              <ItemHorizontal
-                src={shirtTwo}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemOne} />
             </div>
             <div>
-              <ItemHorizontal
-                src={shirtTwo}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemOne} />
             </div>
           </Carousel>
         </div>
