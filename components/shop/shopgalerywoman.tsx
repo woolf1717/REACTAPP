@@ -7,10 +7,7 @@ import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 import ItemVertical from "./shopcomponents/itemvertical";
 
-import shirtTwo from "../../src/pictures/products/koszula2/Przechwytywanie.jpg";
-import shoes from "../../src/pictures/products/buty2/Przechwytywanie.jpg";
-import watch from "../../src/pictures/products/zegarek/2.jpg";
-import trousers from "../../src/pictures/products/spodnie/2.jpg";
+import itemsList from "../shop/itemslist/itemslist";
 
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
@@ -39,6 +36,12 @@ export default function ShopGaleryWoman() {
       items: 4,
     },
   };
+  const itemOne = itemsList[2];
+  const itemTwo = itemsList[3];
+  const itemThree = itemsList[3];
+  const itemFour = itemsList[3];
+  const itemFive = itemsList[3];
+  const itemSix = itemsList[3];
   return (
     <>
       <div className="relative col-start-1 col-end-3 row-start-11 row-end-13 flex flex-col overflow-hidden rounded-md bg-neutral-50 p-2 ">
@@ -54,146 +57,29 @@ export default function ShopGaleryWoman() {
             removeArrowOnDeviceType={["tablet", "mobile"]}
           >
             <div>
-              <ItemVertical
-                src={shirtTwo}
-                width={60}
-                height={60}
-                starsprops={3.5}
-                name={"Men shirt two"}
-                price={500}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis)"}
-              />
+              <ItemVertical {...itemOne} />
             </div>
             <div>
-              <ItemVertical
-                src={trousers}
-                width={60}
-                height={60}
-                starsprops={4}
-                name={"Men trousers"}
-                price={600}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis)"}
-              />
+              <ItemVertical {...itemOne} />
             </div>
             <div>
-              <ItemVertical
-                src={watch}
-                width={60}
-                height={60}
-                starsprops={4.5}
-                name={"Men watch"}
-                price={1799}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis)"}
-              />
+              <ItemVertical {...itemOne} />
             </div>
             <div>
-              <ItemVertical
-                src={shoes}
-                width={60}
-                height={60}
-                starsprops={5}
-                name={"Shoes"}
-                price={850}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis). Buty trekingowe"}
-              />
+              <ItemVertical {...itemOne} />
             </div>
             <div>
-              <ItemVertical
-                src={shirtTwo}
-                width={60}
-                height={60}
-                starsprops={3.5}
-                name={"Men shirt two"}
-                price={500}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis)"}
-              />
+              <ItemVertical {...itemOne} />
             </div>
             <div>
-              <ItemVertical
-                src={trousers}
-                width={60}
-                height={60}
-                starsprops={4}
-                name={"Men trousers"}
-                price={600}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis)"}
-              />
+              <ItemVertical {...itemOne} />
             </div>
             <div>
-              <ItemVertical
-                src={watch}
-                width={60}
-                height={60}
-                starsprops={4.5}
-                name={"Men watch"}
-                price={1799}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis)"}
-              />
-            </div>
-            <div>
-              <ItemVertical
-                src={shoes}
-                width={60}
-                height={60}
-                starsprops={5}
-                name={"Shoes"}
-                price={850}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis). Buty trekingowe"}
-              />
-            </div>
-            <div>
-              <ItemVertical
-                src={watch}
-                width={60}
-                height={60}
-                starsprops={4.5}
-                name={"Men watch"}
-                price={1799}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis)"}
-              />
-            </div>
-            <div>
-              <ItemVertical
-                src={shoes}
-                width={60}
-                height={60}
-                starsprops={5}
-                name={"Shoes"}
-                price={850}
-                alt={""}
-
-                // descr={"Opis produktu (krótki opis). Buty trekingowe"}
-              />
+              <ItemVertical {...itemOne} />
             </div>
           </Carousel>
         </div>
       </div>
-      {/* <Image
-        src={src}
-        width={50}
-        height={50}
-        quality={75}
-        alt={"opis"}
-        className="pt-px"
-      /> */}
     </>
   );
 }

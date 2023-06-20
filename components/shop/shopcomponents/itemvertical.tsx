@@ -21,8 +21,8 @@ export default function ItemVertical({
       <div className="">
         <Image
           src={src}
-          width={width}
-          height={height}
+          width={75}
+          height={75}
           quality={75}
           alt={alt}
           className="relative  left-1/2 -translate-x-2/4 pt-px"

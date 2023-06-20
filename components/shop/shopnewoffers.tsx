@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import bag from "../../src/pictures/products/torba/Przechwytywanie.jpg";
-import jacket from "../../src/pictures/products/kurtka/Przechwytywanie.jpg";
+import itemsList from "../shop/itemslist/itemslist";
+
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
 
 // https://www.npmjs.com/package/react-multi-carousel
@@ -30,6 +30,10 @@ export default function ShopNewOffers() {
       items: 2,
     },
   };
+  const itemOne = itemsList[0];
+  const itemTwo = itemsList[1];
+  const itemThree = itemsList[1];
+  const itemFour = itemsList[1];
   return (
     <>
       <div className="col-start-1  col-end-3 row-start-7 row-end-9 rounded-md bg-neutral-50 px-2 pt-2">
@@ -45,64 +49,17 @@ export default function ShopNewOffers() {
             removeArrowOnDeviceType={["tablet", "mobile"]}
           >
             <div className="w-full">
-              <ItemHorizontal
-                src={bag}
-                width={75}
-                height={75}
-                starsprops={5}
-                name={"Bag"}
-                price={2200}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemOne} />
             </div>
             <div>
-              <ItemHorizontal
-                src={jacket}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemTwo} />
             </div>
             <div>
-              <ItemHorizontal
-                src={jacket}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
+              {" "}
+              <ItemHorizontal {...itemThree} />
             </div>
             <div>
-              <ItemHorizontal
-                src={jacket}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
-            </div>
-            <div>
-              <ItemHorizontal
-                src={jacket}
-                width={75}
-                height={75}
-                starsprops={3.5}
-                name={"Jacket"}
-                price={1699}
-                alt={""}
-                descr={""}
-              />
+              <ItemHorizontal {...itemFour} />
             </div>
           </Carousel>
         </div>
