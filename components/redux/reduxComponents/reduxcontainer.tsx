@@ -5,11 +5,14 @@ import { Provider } from "react-redux";
 import themeReducer from "../reduxFeatures/theme";
 import userReducer from "../reduxFeatures/user";
 import menuReducer from "../reduxFeatures/menuSlide";
+import popupReducer from "../reduxFeatures/shopPopup";
+
 const store = configureStore({
   reducer: {
     user: userReducer,
     theme: themeReducer,
     menu: menuReducer,
+    popup: popupReducer,
   },
 });
 

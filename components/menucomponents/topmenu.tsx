@@ -15,8 +15,6 @@ import { flagMenuOn, flagMenuOff } from "../redux/reduxFeatures/menuSlide";
 import Search from "../search";
 import SlidingMenu from "./slidingmenu";
 
-// import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -26,9 +24,7 @@ import logo from "../../src/pictures/logo/logo2.png";
 export default function TopMenu() {
   const router = useRouter();
   const dispatch = useDispatch();
-  // const myAccountArrowDown = <FontAwesomeIcon icon={faChevronDown} />;
-  // const myAccountArrowUp = <FontAwesomeIcon icon={faChevronUp} />;
-  const [search, setSearch] = useState<boolean>(false);
+
   const [mySearchActive, setMySearchActive] = useState<boolean>(false);
 
   const user = (
@@ -42,17 +38,11 @@ export default function TopMenu() {
     setMySearchActive(!mySearchActive);
   }
 
-  function handleSearchInit() {
-    setSearch(false);
-  }
-  function handleSearchAbort() {
-    setSearch(true);
-  }
   const menuState = useSelector((state: any) => state.menu.value);
 
   return (
     <>
-      <div className="flex h-14 justify-between bg-blue-950 text-amber-50 ">
+      <div className="flex h-14 justify-between bg-blue-950 text-amber-50">
         {" "}
         <Link href={"/"}>
           {" "}
@@ -60,10 +50,9 @@ export default function TopMenu() {
             <Image src={logo} quality={100} alt="logo" height={50} />
           </div>
         </Link>
-        {/* <div className=" h-12 text-amber-50 flex justify-end items-center"> */}
         <div className="flex-end flex pt-4">
           <div
-            className={` mr-px inline-block ${
+            className={`mr-px inline-block ${
               mySearchActive ? "z-50 text-yellow-400" : ""
             }`}
           >

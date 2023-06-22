@@ -6,7 +6,7 @@ import TopMenu from "./menucomponents/topmenu";
 
 export default function Menu() {
   return (
-    <nav className=" w-screen overflow-hidden bg-blue-950 text-lg">
+    <nav className="w-screen overflow-hidden bg-blue-950 text-lg">
       <TopMenu />
       {/* <BottomMenu /> */}
     </nav>

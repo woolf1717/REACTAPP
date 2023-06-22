@@ -6,6 +6,7 @@ import { Container } from "../components/container";
 import Footer from "../components/footer";
 import Menu from "../components/menu";
 
+import ItemFullView from "../components/shop/shopcomponents/itemfullview";
 import ShopGalery from "../components/shop/shopgalery";
 import ShopGaleryWoman from "../components/shop/shopgalerywoman";
 import ShopNav from "../components/shop/shopnav";
@@ -18,6 +19,7 @@ export default function Shop() {
   return (
     <>
       <ReduxContainer>
+        <ItemFullView />
         <Menu />
         <Container>
           <div className="h-200vh ">
