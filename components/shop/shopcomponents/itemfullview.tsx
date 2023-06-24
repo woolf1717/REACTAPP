@@ -13,6 +13,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import Rateing from "./rateing";
 import itemsList from "../../shop/itemslist/itemslist";
 
+import { addToCart } from "../../redux/reduxFeatures/shopCart";
+
 import { useState } from "react";
 
 import Image from "next/image";
@@ -21,9 +23,21 @@ export default function ItemFullView() {
   let outcome;
   const [counter, setCounter] = useState(0);
   const dispatch = useDispatch();
-  const hideFlagPopup = () => dispatch(flagPopupOff());
+  const hideFlagPopup = () => {
+    dispatch(flagPopupOff());
+    setCounter(0);
+  };
+
   const productState = useSelector((state: any) => state.popup.value);
   const currentProduct: any = itemsList.find((el) => el.name === productState);
+  const cartState = useSelector((state: any) => state.shopCart.value);
+  const cartStateOfCurrentProduct = cartState.find(
+    (el): any => el.name === productState.name
+  );
+  let leftTooAdd;
+
+  // I must find the product in array caled cartState and chceck what number does it represent
+
   if (productState) {
     outcome = (
       <div className="relative">
@@ -66,7 +80,9 @@ export default function ItemFullView() {
               <div className="text-xxl font-semibold text-red-600">
                 {currentProduct.price} PLN asadsasdas
               </div>
-              <div className="text-xxl opacity-75">Sale</div>
+              <div className="text-xxl opacity-75">
+                {/* In cart {cartStateOfCurrentProduct} */}
+              </div>
             </div>{" "}
             <div className="flex justify-around pt-1.5">
               <div className="text-xxl font-semibold">
@@ -93,7 +109,19 @@ export default function ItemFullView() {
               <button
                 className="bodrer-solid border-2 px-2"
                 onClick={() => {
-                  setCounter(counter + 1);
+                  //
+                  // console.log({counter} {currentProduct.name});
+                  dispatch(
+                    addToCart({ name: currentProduct.name, counter: counter })
+                  );
+                  leftTooAdd = currentProduct.count;
+                  setCounter(0);
+                  console.log(
+                    leftTooAdd,
+                    productState,
+                    currentProduct.count,
+                    cartState
+                  );
                 }}
               >
                 Add to cart

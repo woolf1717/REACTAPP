@@ -6,6 +6,7 @@ import themeReducer from "../reduxFeatures/theme";
 import userReducer from "../reduxFeatures/user";
 import menuReducer from "../reduxFeatures/menuSlide";
 import popupReducer from "../reduxFeatures/shopPopup";
+import shopCartReducer from "../reduxFeatures/shopCart";
 
 const store = configureStore({
   reducer: {
@@ -13,6 +14,7 @@ const store = configureStore({
     theme: themeReducer,
     menu: menuReducer,
     popup: popupReducer,
+    shopCart: shopCartReducer,
   },
 });
 
