@@ -32,8 +32,20 @@ export default function ItemFullView() {
   const currentProduct: any = itemsList.find((el) => el.name === productState);
   const cartState = useSelector((state: any) => state.shopCart.value);
   const cartStateOfCurrentProduct = cartState.find(
-    (el): any => el.name === productState.name
+    (el: any) => el.name === productState
   );
+  const inCartValue =
+    cartStateOfCurrentProduct === undefined
+      ? 0
+      : cartStateOfCurrentProduct.counter;
+  // const inCart = () => {
+  //   if (cartStateOfCurrentProduct === undefined) {
+  //     setInCartValue(0);
+  //   } else {
+  //     setInCartValue(cartStateOfCurrentProduct.counter);
+  //   }
+  // };
+
   let leftTooAdd;
 
   // I must find the product in array caled cartState and chceck what number does it represent
@@ -80,9 +92,7 @@ export default function ItemFullView() {
               <div className="text-xxl font-semibold text-red-600">
                 {currentProduct.price} PLN asadsasdas
               </div>
-              <div className="text-xxl opacity-75">
-                {/* In cart {cartStateOfCurrentProduct} */}
-              </div>
+              <div className="text-xxl opacity-75">In cart ({inCartValue})</div>
             </div>{" "}
             <div className="flex justify-around pt-1.5">
               <div className="text-xxl font-semibold">
@@ -98,7 +108,8 @@ export default function ItemFullView() {
                 <button
                   className="bodrer-solid border-2 px-2"
                   onClick={() => {
-                    if (counter < currentProduct.count) setCounter(counter + 1);
+                    if (counter < currentProduct.count - inCartValue)
+                      setCounter(counter + 1);
                   }}
                 >
                   +
@@ -109,7 +120,6 @@ export default function ItemFullView() {
               <button
                 className="bodrer-solid border-2 px-2"
                 onClick={() => {
-                  //
                   // console.log({counter} {currentProduct.name});
                   dispatch(
                     addToCart({ name: currentProduct.name, counter: counter })
@@ -117,11 +127,14 @@ export default function ItemFullView() {
                   leftTooAdd = currentProduct.count;
                   setCounter(0);
                   console.log(
-                    leftTooAdd,
+                    leftTooAdd - 2,
                     productState,
                     currentProduct.count,
-                    cartState
+                    cartState,
+                    cartStateOfCurrentProduct
                   );
+
+                  // inCart
                 }}
               >
                 Add to cart

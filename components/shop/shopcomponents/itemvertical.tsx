@@ -14,7 +14,7 @@ export default function ItemVertical({
   src,
   alt,
   name,
-  descr,
+  counter,
   starsprops,
   price,
 }: any) {
@@ -38,9 +38,15 @@ export default function ItemVertical({
           {starsprops}
           <Rateing stars={starsprops} />
         </div>
-        <div className="flex justify-around pt-px">
-          <div className="text-xxs font-semibold text-red-600">{price} PLN</div>
-          <div className="text-xxs opacity-75">Sale</div>
+        <div className="flex flex-row justify-center text-xs">
+          {counter ? `In cart ${counter} pieces. ` : ""}
+        </div>
+        <div className="flex justify-center pt-px">
+          <div className="pr-3 text-xxs font-semibold text-red-600">
+            {price} PLN
+          </div>
+
+          <div className="pl-3 text-xxs opacity-75">Sale</div>
         </div>{" "}
       </div>
     </>
