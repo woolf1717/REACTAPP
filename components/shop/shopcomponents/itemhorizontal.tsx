@@ -3,13 +3,12 @@
 import Image from "next/image";
 
 import React from "react";
-import { useState } from "react";
 
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
 import Rateing from "./rateing";
-import ItemFullView from "./itemfullview";
+
 import { flagPopupOn } from "../../redux/reduxFeatures/shopPopup";
 
 export default function ItemHorizontal({

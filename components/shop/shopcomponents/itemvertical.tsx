@@ -21,8 +21,11 @@ export default function ItemVertical({
   const dispatch = useDispatch();
   return (
     <>
-      {" "}
-      <div onClick={() => dispatch(flagPopupOn(name))}>
+      <div
+        onClick={() => {
+          dispatch(flagPopupOn(name));
+        }}
+      >
         <div>
           <Image
             src={src}
@@ -42,11 +45,11 @@ export default function ItemVertical({
           {counter ? `In cart ${counter} pieces. ` : ""}
         </div>
         <div className="flex justify-center pt-px">
-          <div className="pr-3 text-xxs font-semibold text-red-600">
-            {price} PLN
+          <div className="pr-px text-xxs font-semibold text-red-600">
+            {price}PLN
           </div>
 
-          <div className="pl-3 text-xxs opacity-75">Sale</div>
+          <div className="pl-px text-xxs opacity-75">Sale</div>
         </div>{" "}
       </div>
     </>

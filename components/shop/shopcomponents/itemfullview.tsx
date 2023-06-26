@@ -13,13 +13,17 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import Rateing from "./rateing";
 import itemsList from "../../shop/itemslist/itemslist";
 
-import { addToCart } from "../../redux/reduxFeatures/shopCart";
+import {
+  addToCart,
+  removeFromCart,
+  removeProductFromCart,
+} from "../../redux/reduxFeatures/shopCart";
 
 import { useState } from "react";
 
 import Image from "next/image";
 
-export default function ItemFullView() {
+export default function ItemFullView({ remove }) {
   let outcome;
   const [counter, setCounter] = useState(0);
   const dispatch = useDispatch();
@@ -27,7 +31,6 @@ export default function ItemFullView() {
     dispatch(flagPopupOff());
     setCounter(0);
   };
-
   const productState = useSelector((state: any) => state.popup.value);
   const currentProduct: any = itemsList.find((el) => el.name === productState);
   const cartState = useSelector((state: any) => state.shopCart.value);
@@ -45,7 +48,7 @@ export default function ItemFullView() {
   //     setInCartValue(cartStateOfCurrentProduct.counter);
   //   }
   // };
-
+  let flip = remove;
   let leftTooAdd;
 
   // I must find the product in array caled cartState and chceck what number does it represent
@@ -94,6 +97,29 @@ export default function ItemFullView() {
               </div>
               <div className="text-xxl opacity-75">In cart ({inCartValue})</div>
             </div>{" "}
+            {!remove ? (
+              <div className="flex justify-center text-xxs">
+                <button
+                  onClick={() => {
+                    dispatch(removeFromCart({ name: currentProduct.name }));
+                  }}
+                >
+                  Click for less. {""}
+                </button>
+                &nbsp;&nbsp;
+                <button
+                  onClick={() => {
+                    dispatch(
+                      removeProductFromCart({ name: currentProduct.name })
+                    );
+                  }}
+                >
+                  Remove from the store.
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
             <div className="flex justify-around pt-1.5">
               <div className="text-xxl font-semibold">
                 <button
@@ -126,14 +152,6 @@ export default function ItemFullView() {
                   );
                   leftTooAdd = currentProduct.count;
                   setCounter(0);
-                  console.log(
-                    leftTooAdd - 2,
-                    productState,
-                    currentProduct.count,
-                    cartState,
-                    cartStateOfCurrentProduct
-                  );
-
                   // inCart
                 }}
               >

@@ -19,7 +19,7 @@ export default function Shop() {
   return (
     <>
       <ReduxContainer>
-        <ItemFullView />
+        <ItemFullView remove={true} />
         <Menu />
         <Container>
           <div className="h-200vh ">
