@@ -1,14 +1,13 @@
 ﻿import "../../src/app/globals.css";
 
 import React from "react";
-
-import itemsList from "../shop/itemslist/itemslist";
-
-import ItemHorizontal from "./shopcomponents/itemhorizontal";
-
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+import ItemHorizontal from "./shopcomponents/itemhorizontal";
+
+import itemsList from "../shop/itemslist/itemslist";
 
 export default function ShopNewOffers() {
   const responsive = {

@@ -3,10 +3,9 @@
 import Image from "next/image";
 
 import React from "react";
+import { useSelector } from "react-redux";
 
 import modelPhoto from "../../src/pictures/handsome-man.jpg";
-
-import { useSelector } from "react-redux";
 
 export default function ShopPosterOne() {
   const cartState = useSelector((state: any) => state.shopCart.value);

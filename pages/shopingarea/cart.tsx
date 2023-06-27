@@ -2,12 +2,13 @@
 
 import ReduxContainer from "../../components/redux/reduxComponents/reduxcontainer";
 
-import ShopingCart from "../../components/shop/shopingcart";
 import { Container } from "../../components/container";
 import Footer from "../../components/footer";
-import Menu from "../../components/menu";
-import ShopNav from "../../components/shop/shopnav";
 import ItemFullView from "../../components/shop/shopcomponents/itemfullview";
+import Menu from "../../components/menu";
+import ShopingCart from "../../components/shop/shopingcart";
+import ShopNav from "../../components/shop/shopnav";
+
 export default function Cart() {
   return (
     <>

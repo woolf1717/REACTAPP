@@ -1,7 +1,7 @@
-﻿import React from "react";
+﻿import Image from "next/image";
 
+import React from "react";
 import { useState } from "react";
-import Image from "next/image";
 
 const PostShort = ({ post: { title, body, imgUrl, author }, index }: any) => {
   const [postVisiblity, setPostVisiblity] = useState(false);

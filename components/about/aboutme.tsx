@@ -1,7 +1,9 @@
 ﻿import "../../src/app/globals.css";
+
 import Image from "next/image";
 
 import me from "../../src/pictures/me/me.svg";
+
 export default function AboutMe() {
   return (
     <>

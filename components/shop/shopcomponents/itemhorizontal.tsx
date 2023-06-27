@@ -7,9 +7,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import Rateing from "./rateing";
-
 import { flagPopupOn } from "../../redux/reduxFeatures/shopPopup";
+
+import Rateing from "./rateing";
 
 export default function ItemHorizontal({
   src,

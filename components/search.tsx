@@ -1,8 +1,4 @@
 ﻿import React from "react";
-import { useState } from "react";
-
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Search({ search }: any) {
   let outcome;

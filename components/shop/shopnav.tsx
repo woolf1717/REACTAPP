@@ -8,11 +8,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAddressBook,
+  faBook,
+  faCartShopping,
   faClock,
   faHouse,
   faLaptop,
-  faBook,
-  faCartShopping,
   faShirt,
   faShoePrints,
 } from "@fortawesome/free-solid-svg-icons";

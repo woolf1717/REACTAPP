@@ -1,20 +1,14 @@
 ﻿import "../../src/app/globals.css";
 
 import React from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
-import bag from "../../src/pictures/products/torba/Przechwytywanie.jpg";
-import jacket from "../../src/pictures/products/kurtka/Przechwytywanie.jpg";
-import ItemHorizontal from "./shopcomponents/itemhorizontal";
-
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import Image from "next/image";
-import src from "../../src/Books/1.svg";
+import ItemHorizontal from "./shopcomponents/itemhorizontal";
+
+import bag from "../../src/pictures/products/torba/Przechwytywanie.jpg";
+import jacket from "../../src/pictures/products/kurtka/Przechwytywanie.jpg";
 
 export default function ShopBooks() {
   const responsive = {

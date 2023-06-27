@@ -1,22 +1,17 @@
 ﻿import "../../src/app/globals.css";
 
 import React from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
-import itemsList from "../shop/itemslist/itemslist";
-
-import ItemHorizontal from "./shopcomponents/itemhorizontal";
-
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import ItemHorizontal from "./shopcomponents/itemhorizontal";
+
+import itemsList from "../shop/itemslist/itemslist";
+
 export default function ShopGalery() {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 4,
     },

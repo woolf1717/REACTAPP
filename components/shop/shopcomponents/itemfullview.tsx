@@ -1,17 +1,14 @@
 ﻿import "../../../src/app/globals.css";
 
+import Image from "next/image";
+
 import React from "react";
+import { useState } from "react";
 
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
 import { flagPopupOff } from "../../redux/reduxFeatures/shopPopup";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faX } from "@fortawesome/free-solid-svg-icons";
-
-import Rateing from "./rateing";
-import itemsList from "../../shop/itemslist/itemslist";
 
 import {
   addToCart,
@@ -19,11 +16,14 @@ import {
   removeProductFromCart,
 } from "../../redux/reduxFeatures/shopCart";
 
-import { useState } from "react";
+import Rateing from "./rateing";
 
-import Image from "next/image";
+import itemsList from "../../shop/itemslist/itemslist";
 
-export default function ItemFullView({ remove }) {
+import { faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export default function ItemFullView({ remove }: any) {
   let outcome;
   const [counter, setCounter] = useState(0);
   const dispatch = useDispatch();
@@ -41,17 +41,6 @@ export default function ItemFullView({ remove }) {
     cartStateOfCurrentProduct === undefined
       ? 0
       : cartStateOfCurrentProduct.counter;
-  // const inCart = () => {
-  //   if (cartStateOfCurrentProduct === undefined) {
-  //     setInCartValue(0);
-  //   } else {
-  //     setInCartValue(cartStateOfCurrentProduct.counter);
-  //   }
-  // };
-  let flip = remove;
-  let leftTooAdd;
-
-  // I must find the product in array caled cartState and chceck what number does it represent
 
   if (productState) {
     outcome = (
@@ -150,7 +139,6 @@ export default function ItemFullView({ remove }) {
                   dispatch(
                     addToCart({ name: currentProduct.name, counter: counter })
                   );
-                  leftTooAdd = currentProduct.count;
                   setCounter(0);
                   // inCart
                 }}

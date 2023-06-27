@@ -1,25 +1,17 @@
 ﻿import "../../src/app/globals.css";
 
 import React from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+// https://www.npmjs.com/package/react-multi-carousel
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import ItemVertical from "./shopcomponents/itemvertical";
 
 import itemsList from "../shop/itemslist/itemslist";
 
-// https://www.npmjs.com/package/react-multi-carousel
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-
-import Image from "next/image";
-import src from "../../src/Books/1.svg";
-
 export default function ShopGaleryWoman() {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 4,
     },

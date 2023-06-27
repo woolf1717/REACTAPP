@@ -1,12 +1,10 @@
 ﻿import React from "react";
+import { useState } from "react";
 
 import PostShort from "./post";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
-import { useState } from "react";
-// import { current } from "@reduxjs/toolkit";
 
 const BlogArticlesSection = () => {
   const [currentPage, setCurrentPage] = useState(1);

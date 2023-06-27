@@ -2,20 +2,17 @@
 
 import React from "react";
 
-import ItemVertical from "./shopcomponents/itemvertical";
-
-import itemsList from "../shop/itemslist/itemslist";
-
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { useState } from "react";
+import ItemVertical from "./shopcomponents/itemvertical";
+
+import itemsList from "../shop/itemslist/itemslist";
 
 export default function ShopTopSale() {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -32,6 +29,7 @@ export default function ShopTopSale() {
       items: 1,
     },
   };
+
   const itemOne = itemsList[0];
   const itemTwo = itemsList[1];
 
