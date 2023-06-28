@@ -1,10 +1,8 @@
-﻿9.CLEAN CODE. Develop system to keep your code clean.
-10.SHOP. Make a system that allows you to "pay" and "deploy" resouces.
+﻿10.SHOP. Make a system that allows you to "pay" and "deploy" resouces.
 
 12. 13. 14. 15. 16. 17.LOGIN FORM. Make an actual user's account, and give it actual functionality. (to read full article you must log in)
                     18.BLOG. Cooperetion info (if you want to add article ask for blogger status on you accoud)
                     19.SEARCH. Add search engine.
-                    20.CODE QUALITY. Upgrade to real Type Script.
 
 Free pass:
 7.SHOP. Change shop products for ones with actual products made by you. Figure out what kind of content you want to provide and list your ideas.(dont need it at the moment)
@@ -17,3 +15,4 @@ Done:
 4.BLOG. Make dir with a few articles and create actual UI that allows to read these articles. (i want them to be sorted by date)
 6.NEWSLETTER. Create form for people interested in newsfeed about programing and buisnes.
 8.SHOP. Add possibility to cart products you are intrested in.12.SHOP. When you click "more" make it o you can see popup with a product.
+9.CLEAN CODE. Develop system to keep your code clean. 20.CODE QUALITY. Upgrade to real Type Script.
