@@ -1,10 +1,12 @@
 ﻿import { createSlice } from "@reduxjs/toolkit";
-
-const initialStateValue = false;
+interface MenuState {
+  value: boolean;
+}
+const initialState: MenuState = { value: false };
 
 const menuSlice = createSlice({
   name: "menu",
-  initialState: { value: initialStateValue },
+  initialState,
   reducers: {
     flagMenuOn: (state) => {
       state.value = true;

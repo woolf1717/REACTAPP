@@ -3,7 +3,20 @@
 import React from "react";
 import { useState } from "react";
 
-const PostShort = ({ post: { title, body, imgUrl, author }, index }: any) => {
+interface PostShortProps {
+  post: {
+    title: string;
+    body: string;
+    imgUrl: string;
+    author: string;
+  };
+  index: number;
+}
+
+const PostShort = ({
+  post: { title, body, imgUrl, author },
+  index,
+}: PostShortProps) => {
   const [postVisiblity, setPostVisiblity] = useState(false);
 
   const visiblePostShort = (

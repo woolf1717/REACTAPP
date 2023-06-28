@@ -1,6 +1,6 @@
 ﻿import React from "react";
 
-export default function Search({ search }: any) {
+export default function Search({ search }: { search: boolean }) {
   let outcome;
 
   if (!search) {

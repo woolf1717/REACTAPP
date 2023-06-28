@@ -8,8 +8,7 @@ export default function LoginForm() {
   const [passwordInput, setPasswordInput] = useState<string>("");
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
-  const handleLogIn = (e: any) => {
-    e.preventDefault();
+  const handleLogIn = () => {
     setLoggedIn(true);
   };
 

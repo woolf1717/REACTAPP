@@ -1,10 +1,14 @@
 ﻿import { createSlice } from "@reduxjs/toolkit";
 
-const initialStateValue = "";
+interface PopupState {
+  value: string;
+}
+
+const initialState: PopupState = { value: "" };
 
 const shopPopup = createSlice({
   name: "popup",
-  initialState: { value: initialStateValue },
+  initialState,
   reducers: {
     flagPopupOn: (state, action) => {
       state.value = action.payload;

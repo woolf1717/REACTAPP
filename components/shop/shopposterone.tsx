@@ -3,12 +3,13 @@
 import Image from "next/image";
 
 import React from "react";
-import { useSelector } from "react-redux";
+
+import { useAppSelector } from "../redux/reduxHooks/hooks";
 
 import modelPhoto from "../../src/pictures/handsome-man.jpg";
 
 export default function ShopPosterOne() {
-  const cartState = useSelector((state: any) => state.shopCart.value);
+  const cartState = useAppSelector((state) => state.shopCart.value);
   return (
     <>
       <div className=" col-start-1 col-end-3 row-start-1  row-end-3 overflow-hidden rounded-md bg-black">
@@ -17,6 +18,7 @@ export default function ShopPosterOne() {
             <Image
               src={modelPhoto}
               quality={100}
+              priority={false}
               alt="Andrea Piacquadio"
               className="absolute -translate-y-2 justify-center opacity-50"
             />

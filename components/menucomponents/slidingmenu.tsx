@@ -8,7 +8,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { flagMenuOff } from "../redux/reduxFeatures/menuSlide";
 
-export default function SlidingMenu({ menu }: any) {
+export default function SlidingMenu({ menu }: { menu: boolean }) {
   const router = useRouter();
   const dispatch = useDispatch();
   let outcome;
@@ -17,10 +17,10 @@ export default function SlidingMenu({ menu }: any) {
   if (menu) {
     outcome = (
       <div
-        className="h-full opacity-75 bg-blue-950 fixed z-10 pt-14 w-full text-3xl "
+        className="fixed z-10 h-full w-full bg-blue-950 pt-14 text-3xl opacity-75 "
         onClick={hideFlagMenu}
       >
-        <div className="text-amber-50 leading-10 pt-0.5 flex flex-col text-center justify-around">
+        <div className="flex flex-col justify-around pt-0.5 text-center leading-10 text-amber-50">
           <Link
             href={"/"}
             className={`z-20  ${

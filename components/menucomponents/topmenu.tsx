@@ -8,7 +8,7 @@ import React from "react";
 import { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../redux/reduxHooks/hooks";
 
 import { flagMenuOn, flagMenuOff } from "../redux/reduxFeatures/menuSlide";
 
@@ -38,7 +38,7 @@ export default function TopMenu() {
     setMySearchActive(!mySearchActive);
   }
 
-  const menuState = useSelector((state: any) => state.menu.value);
+  const menuState = useAppSelector((state) => state.menu.value);
 
   return (
     <>

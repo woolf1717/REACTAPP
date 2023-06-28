@@ -1,47 +1,52 @@
-﻿import { createSlice } from "@reduxjs/toolkit";
+﻿import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-const initialStateValue: any = [];
+interface ShopCartState {
+  name: string;
+  counter: number;
+}
+
+const initialStateValue: ShopCartState[] = [];
 
 const shopCart = createSlice({
   name: "shopCart",
   initialState: { value: initialStateValue },
   reducers: {
-    addToCart: (state, action) => {
+    addToCart: (state, action: PayloadAction<ShopCartState>) => {
       //tu mam numer indexu
       if (
-        state.value.findIndex((el: any) => el.name === action.payload.name) ===
-        -1
+        state.value.findIndex((el) => el.name === action.payload.name) === -1
       ) {
         state.value.push(action.payload);
       } else {
         state.value[
-          state.value.findIndex((el: any) => el.name === action.payload.name)
+          state.value.findIndex((el) => el.name === action.payload.name)
         ].counter += action.payload.counter;
       }
     },
-    removeFromCart: (state, action) => {
+
+    removeFromCart: (state, action: PayloadAction<ShopCartState>) => {
       if (
         state.value[
-          state.value.findIndex((el: any) => el.name === action.payload.name)
+          state.value.findIndex((el) => el.name === action.payload.name)
         ].counter > 0
       ) {
         state.value[
-          state.value.findIndex((el: any) => el.name === action.payload.name)
+          state.value.findIndex((el) => el.name === action.payload.name)
         ].counter -= 1;
       }
     },
-    removeProductFromCart: (state, action) => {
+
+    removeProductFromCart: (state, action: PayloadAction<ShopCartState>) => {
       if (
-        state.value.findIndex((el: any) => el.name === action.payload.name) !==
-        -1
+        state.value.findIndex((el) => el.name === action.payload.name) !== -1
       ) {
         state.value.splice(
-          state.value.findIndex((el: any) => el.name === action.payload.name),
-          state.value.findIndex((el: any) => el.name === action.payload.name) +
-            1
+          state.value.findIndex((el) => el.name === action.payload.name),
+          state.value.findIndex((el) => el.name === action.payload.name) + 1
         );
       }
     },
+
     removeAllFromCart: (state) => {
       state.value = initialStateValue;
     },

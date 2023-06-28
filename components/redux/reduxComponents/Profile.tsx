@@ -1,10 +1,10 @@
 ﻿import React from "react";
 
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../redux/reduxHooks/hooks";
 
 function Profile() {
-  const user = useSelector((state: any) => state.user.value);
-  const themeColor = useSelector((state: any) => state.theme.value);
+  const user = useAppSelector((state) => state.user.value);
+  const themeColor = useAppSelector((state) => state.theme.value);
 
   return (
     <div style={{ color: themeColor }}>

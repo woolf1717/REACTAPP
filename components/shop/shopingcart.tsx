@@ -1,12 +1,12 @@
 ﻿import React from "react";
 
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../redux/reduxHooks/hooks";
 import ItemVertical from "./shopcomponents/itemvertical";
 
 import itemsList from "./itemslist/itemslist";
 
 const ShopingCart = () => {
-  const cartState = useSelector((state: any) => state.shopCart.value);
+  const cartState = useAppSelector((state) => state.shopCart.value);
   const currentCart = () => {
     const array = [];
     for (let i = 0; i < cartState.length; i++) {

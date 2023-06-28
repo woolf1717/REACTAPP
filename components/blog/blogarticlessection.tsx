@@ -8,7 +8,7 @@ import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const BlogArticlesSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState<string>("");
   const blogPosts = [
     {
       title: "17. JAVASCRIPT",
@@ -272,7 +272,7 @@ const BlogArticlesSection = () => {
     visiblePosts = blogPosts.slice(firstVisible, forthVisible + 1);
   };
   const setPage = () => {
-    setCurrentPage(inputValue);
+    setCurrentPage(Number(inputValue));
   };
   return (
     <>
@@ -280,11 +280,6 @@ const BlogArticlesSection = () => {
         {visiblePosts.map((post, index) => (
           <PostShort key={index} index={index} post={post} />
         ))}{" "}
-        {postsCount}
-        {pagesCount}
-        {currentPage}
-        <br></br>
-        {firstVisible},{forthVisible}
       </div>
       <nav className="auto mt-3 flex w-full items-center justify-center text-center">
         <div>
@@ -306,6 +301,7 @@ const BlogArticlesSection = () => {
             <div className="inline-block">
               Go to page{" "}
               <input
+                type="text"
                 className="w-6"
                 onChange={(e) => {
                   e.preventDefault, setInputValue(e.target.value);
