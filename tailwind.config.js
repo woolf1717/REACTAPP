@@ -51,9 +51,15 @@ module.exports = {
       height: {
         "6/5": "120%",
         "120vh": "120vh",
+        "140vh": "140vh",
+        "160vh": "160vh",
+        "180vh": "180vh",
+        "200vh": "200vh",
+        "220vh": "220vh",
       },
       fontSize: {
         xxs: "0.6rem",
+        xxxs: "0.5rem",
       },
     },
   },

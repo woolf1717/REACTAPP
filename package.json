@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/helper-module-imports": "^7.21.4",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -22,13 +23,22 @@
     "babel-plugin-macros": "^3.1.0",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "mysql2": "^3.4.3",
     "next": "13.4.2",
+    "next-redux-wrapper": "^8.1.0",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-multi-carousel": "^2.8.4",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }

@@ -1,20 +1,24 @@
 ﻿import "../src/app/globals.css";
 
-import Link from "next/link";
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
-import Menu from "../components/menu";
-import Empty from "../components/empty";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
+import Menu from "../components/menu";
+import Newsletter from "../components/newsletter";
+import LoginForm from "../components/menucomponents/loginForm";
 
 export default function Login() {
   return (
     <>
-      <Menu />
-      <Container>
-        <Empty />
-      </Container>
-      <Footer />
+      <ReduxContainer>
+        <Menu />
+        <Container>
+          <LoginForm />
+          <Newsletter />
+        </Container>{" "}
+        <Footer />
+      </ReduxContainer>
     </>
   );
 }

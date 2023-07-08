@@ -16,6 +16,8 @@
   }
 }
 
+html {
+}
 body {
   color: rgb(var(--background-start-rgb));
   background: linear-gradient(

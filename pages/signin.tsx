@@ -1,21 +1,23 @@
 ﻿import "../src/app/globals.css";
 
-import Link from "next/link";
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
-import Menu from "../components/menu";
-import Empty from "../components/empty";
 import { Container } from "../components/container";
+import Empty from "../components/empty";
 import Footer from "../components/footer";
+import Menu from "../components/menu";
 
 export default function SingIn() {
   return (
     <>
-      <Menu />
-      <Container>
-        <h1>Sign In</h1>
-        <Empty />
-      </Container>
-      <Footer />
+      <ReduxContainer>
+        <Menu />
+        <Container>
+          <h1>Sign In</h1>
+          <Empty />
+        </Container>
+        <Footer />
+      </ReduxContainer>
     </>
   );
 }

@@ -1,41 +1,20 @@
 ﻿import React from "react";
 
-import Link from "next/link";
-
-import { useState } from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-
-export default function Search() {
-  const [search, setSearch] = useState(true);
-
-  function handleSearchInit() {
-    setSearch(false);
-  }
-  function handleSearchAbort() {
-    setSearch(true);
-  }
+export default function Search({ search }: { search: boolean }) {
   let outcome;
-  if (search) {
-    outcome = (
-      <>
-        <div className="inline-block h-full" onClick={handleSearchInit}>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-        </div>
-      </>
-    );
+
+  if (!search) {
+    outcome = <></>;
   } else {
     outcome = (
       <>
-        <div className="">
-          <div
-            className="inline-block text-yellow-400 text-sm mr-1"
-            onClick={handleSearchAbort}
-          >
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+        {" "}
+        <div className="fixed z-10 h-full w-full bg-blue-950 pt-14 text-3xl opacity-90">
+          <div className="text-center">
+            <div className="z-20 mr-1 inline-block text-sm ">Szukaj:</div>
+            <input className="rounded-3xl text-sm text-black" type="text" />
+            <div> Tu umieszczę tablicę wyników :P</div>
           </div>
-          <input className="text-sm text-black rounded-3xl" type="text" />
         </div>
       </>
     );

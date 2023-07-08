@@ -7,14 +7,14 @@ import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faList,
-  faHouse,
-  faShirt,
-  faLaptop,
-  faClock,
-  faShoePrints,
-  faMapLocationDot,
   faAddressBook,
+  faBook,
+  faCartShopping,
+  faClock,
+  faHouse,
+  faLaptop,
+  faShirt,
+  faShoePrints,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ShopNav() {
@@ -22,54 +22,63 @@ export default function ShopNav() {
 
   return (
     <>
-      <div className="bg-neutral-50 row-start-1 row-end-5 row-span-3 overflow-hidden flex flex-col items-center  pt-px font-semibold rounded-md">
-        <div className="flex flex-col h-2/4 w-full">
+      <div className="row-start-3 row-end-5 flex h-40 flex-col items-center  overflow-hidden rounded-md bg-neutral-50 py-px text-xs font-semibold">
+        <div className="flex h-2/4 w-full flex-col">
           <Link
             href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400  h-1/4 w-full pt-px  ${
-              router.pathname == "/shopingarea" ? "bg-yellow-400" : ""
+            className={`relative h-1/4 w-full pl-2  pt-px ${
+              router.pathname == "/shopingarea" ? "bg-yellow-400 pl-4" : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2">
-              <FontAwesomeIcon icon={faList} /> Categories
+              <FontAwesomeIcon icon={faHouse} /> Home
             </div>
           </Link>{" "}
           <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400  h-1/4 w-full  border-t  ${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
+            href={"/shopingarea/books"}
+            className={`relative h-1/4 w-full border-t  pl-2 ${
+              router.pathname == "/shopingarea/books"
+                ? "bg-yellow-400 pl-4"
+                : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2 ">
-              <FontAwesomeIcon icon={faHouse} /> Home
+              {" "}
+              <FontAwesomeIcon icon={faBook} /> Books
             </div>
           </Link>
           <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
+            href={"/shopingarea/courses"}
+            className={`relative h-1/4 w-full border-t  pl-2 ${
+              router.pathname == "/shopingarea/courses"
+                ? "bg-yellow-400  pl-4"
+                : ""
+            }`}
+          >
+            <div className="absolute top-1/2 -translate-y-1/2">
+              <FontAwesomeIcon icon={faLaptop} /> Courses
+            </div>
+          </Link>
+          <Link
+            href={"/shopingarea/clothing"}
+            className={`relative h-1/4 w-full border-t pl-2 ${
+              router.pathname == "/shopingarea/clothing"
+                ? "bg-yellow-400  pl-4"
+                : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2">
               <FontAwesomeIcon icon={faShirt} /> Clothing
             </div>
           </Link>
-          <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
-            }`}
-          >
-            <div className="absolute top-1/2 -translate-y-1/2">
-              <FontAwesomeIcon icon={faLaptop} /> Electronics
-            </div>
-          </Link>
         </div>
-        <div className="flex flex-col h-2/4 w-full">
+        <div className="flex h-2/4 w-full flex-col">
           <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
+            href={"/shopingarea/watches"}
+            className={`relative h-1/4 w-full border-t pl-2 ${
+              router.pathname == "/shopingarea/watches"
+                ? "bg-yellow-400  pl-4"
+                : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2">
@@ -77,9 +86,11 @@ export default function ShopNav() {
             </div>
           </Link>{" "}
           <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
+            href={"/shopingarea/shoes"}
+            className={`relative h-1/4 w-full border-t pl-2 ${
+              router.pathname == "/shopingarea/shoes"
+                ? "bg-yellow-400  pl-4"
+                : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2">
@@ -87,19 +98,21 @@ export default function ShopNav() {
             </div>
           </Link>
           <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400  h-1/4 w-full border-t ${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
+            href={"/shopingarea/cart"}
+            className={`relative h-1/4 w-full border-t  pl-2 ${
+              router.pathname == "/shopingarea/cart"
+                ? "bg-yellow-400 pl-4  "
+                : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2">
-              <FontAwesomeIcon icon={faMapLocationDot} /> Local Stores
+              <FontAwesomeIcon icon={faCartShopping} /> Cart
             </div>
           </Link>
           <Link
-            href={"/shopingarea"}
-            className={`pl-2 relative hover:text-yellow-400 active:text-yellow-400 h-1/4 w-full border-t${
-              router.pathname == "/shopingarea/" ? "text-yellow-400" : ""
+            href={"/contact"}
+            className={`relative h-1/4 w-full border-t pl-2 ${
+              router.pathname == "/contact" ? "bg-text-yellow-400  pl-4" : ""
             }`}
           >
             <div className="absolute top-1/2 -translate-y-1/2">

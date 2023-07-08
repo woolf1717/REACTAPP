@@ -1,20 +1,22 @@
 ﻿import "../src/app/globals.css";
 
-import Link from "next/link";
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
-import Menu from "../components/menu";
-import Empty from "../components/empty";
+import AboutMe from "../components/about/aboutme";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
+import Menu from "../components/menu";
 
 export default function About() {
   return (
     <>
-      <Menu />
-      <Container>
-        <Empty />
-      </Container>
-      <Footer />
+      <ReduxContainer>
+        <Menu />
+        <Container>
+          <AboutMe />
+        </Container>{" "}
+        <Footer />
+      </ReduxContainer>
     </>
   );
 }

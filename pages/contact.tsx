@@ -1,20 +1,22 @@
 ﻿import "../src/app/globals.css";
 
-import Link from "next/link";
+import ReduxContainer from "../components/redux/reduxComponents/reduxcontainer";
 
-import Menu from "../components/menu";
-import Empty from "../components/empty";
+import ContactForm from "../components/contact/contact";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
+import Menu from "../components/menu";
 
 export default function Contact() {
   return (
     <>
-      <Menu />
-      <Container>
-        <Empty />
-      </Container>
-      <Footer />
+      <ReduxContainer>
+        <Menu />
+        <Container>
+          <ContactForm />
+        </Container>{" "}
+        <Footer />
+      </ReduxContainer>
     </>
   );
 }
