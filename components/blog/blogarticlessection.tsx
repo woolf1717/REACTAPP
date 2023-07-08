@@ -227,7 +227,7 @@ const BlogArticlesSection = () => {
         "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
     },
     {
-      title: "2. Computer Network",
+      title: "2. ",
       body: `An interconnection of multiple devices,
         also known as hosts, that are connected using
         multiple paths for the purpose of sending/

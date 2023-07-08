@@ -8,7 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import ItemVertical from "./shopcomponents/itemvertical";
 
-import itemsList from "../shop/itemslist/itemslist";
+import itemsList from "./itemslist/itemslist.mjs";
 
 export default function ShopTopSale() {
   const responsive = {

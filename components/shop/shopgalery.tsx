@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
 
-import itemsList from "../shop/itemslist/itemslist";
+import itemsList from "./itemslist/itemslist.mjs";
 
 export default function ShopGalery() {
   const responsive = {

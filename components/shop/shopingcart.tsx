@@ -3,7 +3,7 @@
 import { useAppSelector } from "../redux/reduxHooks/hooks";
 import ItemVertical from "./shopcomponents/itemvertical";
 
-import itemsList from "./itemslist/itemslist";
+import itemsList from "./itemslist/itemslist.mjs";
 
 const ShopingCart = () => {
   const cartState = useAppSelector((state) => state.shopCart.value);

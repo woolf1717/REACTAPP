@@ -18,7 +18,7 @@ import {
 
 import Rateing from "./rateing";
 
-import itemsList from "../../shop/itemslist/itemslist";
+import itemsList from "../itemslist/itemslist.mjs";
 
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
