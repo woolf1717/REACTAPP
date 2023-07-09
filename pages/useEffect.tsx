@@ -2,6 +2,9 @@
 import { useEffect, useState } from "react";
 import React from "react";
 
+
+import bag from "../src/pictures/products/bag/1.jpg"
+
 export default function Home() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -17,11 +20,17 @@ export default function Home() {
 
   return (
     <>
+
       {data.map((product) => {
         return (
           <div key={product.product_id}>
-            <div>{product.name}</div>
-            <div>{`${JSON.stringify(product.src.data)}`}</div>
+            <div>Product ID:{product.product_id}</div>
+            <div>Name:{product.name}</div>
+            <div>Starsprops:{product.starsprops}</div>
+            <div>
+              {/* <img src={bag} alt="" /> */}
+            </div>
+            {/* <div>{`${JSON.stringify(product)}`}</div> */}
             <div></div>
           </div>
         );

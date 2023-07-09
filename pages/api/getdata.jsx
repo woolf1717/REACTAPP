@@ -5,15 +5,15 @@ export default async function handler(req, res) {
     host: "localhost",
     database: "mydb",
     user: "root",
-    password: "woolfP111668617!",
+    password: "haslo123",
   });
   try {
-    const query = `SELECT product_id, name, src, starsprops FROM products`;
+    const query = `SELECT product_id, name, starsprops FROM products`;
     const values = [];
     const [data] = await connection.execute(query, values);
     connection.end();
     res.status(200).json({ products: data });
   } catch (error) {
-    // res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 }
