@@ -27,6 +27,7 @@ export default function Home() {
             project to learn connecting with a database.
           </p>
           {/* <Profile />
+        
           <Login />
           <ChangeColor /> */}{" "}
         </Container>{" "}

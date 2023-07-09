@@ -1,5 +1,8 @@
 ﻿10.SHOP. Make a system that allows you to "pay" and "deploy" resouces.
-11.db conection with sql. 12. Try and remove global state in store to useEffect with useRef. 12. 13. 14. 15. 16. 17.LOGIN FORM. Make an actual user's account, and give it actual functionality. (to read full article you must log in)
+11.db conection with sql. 
+12. Try and remove global state in store to useEffect with useRef. 
+
+12. 13. 14. 15. 16. 17.LOGIN FORM. Make an actual user's account, and give it actual functionality. (to read full article you must log in)
 18.BLOG. Cooperetion info (if you want to add article ask for blogger status on you accoud)
 19.SEARCH. Add search engine.
 

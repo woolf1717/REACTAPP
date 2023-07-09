@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import blogpostphoto from "../../src/pictures/blog/blogpostphoto.jpg";
+
 export default function BlogPost() {
   return (
     <>
