@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -18,27 +18,47 @@ import {
 
 import Rateing from "./rateing";
 
-import itemsList from "../itemslist/itemslist.mjs";
-
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ItemFullView({ remove }: any) {
   let outcome;
+
+  const [data, setData] = useState([]);
   const [counter, setCounter] = useState(0);
+
   const dispatch = useDispatch();
+
   const hideFlagPopup = () => {
     dispatch(flagPopupOff());
     setCounter(0);
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      const api = "http://localhost:3000/api/getproducts";
+      const postData = {
+        method: "Post",
+        headers: { "Content-Type": "application/json" }
+      }
+      const response = await fetch(api, postData);
+      const res = await response.json();
+
+      setData(res.products);
+    }
+    fetchData();
+  }, []);
+
   const productState = useSelector((state: any) => state.popup.value);
-  const currentProduct: any = itemsList.find((el) => el.name === productState);
+
+  let currentProduct  = data[productState -1];
+
   const cartState = useSelector((state: any) => state.shopCart.value);
-  const cartStateOfCurrentProduct = cartState.find(
-    (el: any) => el.name === productState
-  );
-  const inCartValue =
-    cartStateOfCurrentProduct === undefined
+  
+  const cartStateOfCurrentProduct =   currentProduct === undefined ? undefined :cartState.find((el: any) => el.name === data[productState - 1].name)  ;
+
+  const inCartValue =  
+    cartStateOfCurrentProduct === undefined 
       ? 0
       : cartStateOfCurrentProduct.counter;
 
@@ -57,6 +77,7 @@ export default function ItemFullView({ remove }: any) {
           <div>
             <div>
               <Image
+                decoding="async"
                 src={currentProduct.src}
                 width={150}
                 height={150}
@@ -135,12 +156,10 @@ export default function ItemFullView({ remove }: any) {
               <button
                 className="bodrer-solid border-2 px-2"
                 onClick={() => {
-                  // console.log({counter} {currentProduct.name});
                   dispatch(
                     addToCart({ name: currentProduct.name, counter: counter })
                   );
                   setCounter(0);
-                  // inCart
                 }}
               >
                 Add to cart
@@ -150,6 +169,7 @@ export default function ItemFullView({ remove }: any) {
         </div>
       </div>
     );
+    // {console.table(outcome)};
   } else {
     ("");
   }
