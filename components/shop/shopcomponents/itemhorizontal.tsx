@@ -12,6 +12,7 @@ import { flagPopupOn } from "../../redux/reduxFeatures/shopPopup";
 import Rateing from "./rateing";
 
 export default function ItemHorizontal({
+  id,
   src,
   starsprops,
   name,
@@ -20,14 +21,17 @@ export default function ItemHorizontal({
 }: any) {
   const dispatch = useDispatch();
   const productState = useSelector((state: any) => state.popup.value);
+  // console.table(typeof src)
   return (
     <>
       {" "}
       <div
         className="flex flex-row pt-2"
-        onClick={() => dispatch(flagPopupOn(name))}
+        onClick={() => dispatch(flagPopupOn(id))}
       >
         <div className="w-2/4">
+        {src &&
+         (
           <Image
             src={src}
             width={75}
@@ -35,7 +39,7 @@ export default function ItemHorizontal({
             quality={75}
             alt={alt}
             className="pt-px"
-          />
+          />)}
         </div>
         <div className="flex w-2/4 flex-col justify-evenly py-2 pl-2">
           <div className="pt-px text-xs font-semibold">{name}</div>

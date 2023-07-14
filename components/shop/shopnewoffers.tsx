@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
 
-import itemsList from "./itemslist/itemslist.mjs";
+import foundProduct from "../../pages/products/productPropsIdTable"
 
 export default function ShopNewOffers() {
   const responsive = {
@@ -29,9 +29,9 @@ export default function ShopNewOffers() {
       items: 2,
     },
   };
-  const itemOne = itemsList[5];
-  const itemTwo = itemsList[6];
-  const itemThree = itemsList[7];
+  const itemOne = foundProduct(8);
+  const itemTwo = foundProduct(6);
+  const itemThree = foundProduct(7);
   return (
     <>
       <div className="col-start-1  col-end-3 row-start-7 row-end-9 rounded-md bg-neutral-50 px-2 pt-2">

@@ -4,10 +4,8 @@ import React from "react";
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import { useEffect, useState } from "react";
 import ItemHorizontal from "./shopcomponents/itemhorizontal";
-
-import itemsList from "./itemslist/itemslist.mjs";
 
 export default function ShopGalery() {
   const responsive = {
@@ -28,9 +26,26 @@ export default function ShopGalery() {
       items: 2,
     },
   };
-  const itemOne = itemsList[2];
-  const itemTwo = itemsList[3];
-  const itemThree = itemsList[4];
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const api = "http://localhost:3000/api/getproducts";
+      const postData = {
+        method: "Post",
+        headers: { "Content-Type": "application/json" }
+      }
+      const response = await fetch(api, postData);
+      const res = await response.json();
+      setData(res.products);
+    }
+    fetchData();
+  }, []);
+  const itemOne = data[2];
+  const itemTwo = data[3];
+  const itemThree = data[4];
+
   return (
     <>
       <div className="col-start-1  col-end-3 row-start-5 row-end-7 rounded-md bg-neutral-50 px-2 pt-2">

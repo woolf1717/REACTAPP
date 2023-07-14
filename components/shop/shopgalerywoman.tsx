@@ -4,10 +4,8 @@ import React from "react";
 // https://www.npmjs.com/package/react-multi-carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import { useEffect, useState } from "react";
 import ItemVertical from "./shopcomponents/itemvertical";
-
-import itemsList from "./itemslist/itemslist.mjs";
 
 export default function ShopGaleryWoman() {
   const responsive = {
@@ -28,10 +26,27 @@ export default function ShopGaleryWoman() {
       items: 4,
     },
   };
-  const itemOne = itemsList[7];
-  const itemTwo = itemsList[2];
-  const itemThree = itemsList[3];
-  const itemFour = itemsList[4];
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const api = "http://localhost:3000/api/getproducts";
+      const postData = {
+        method: "Post",
+        headers: { "Content-Type": "application/json" }
+      }
+      const response = await fetch(api, postData);
+      const res = await response.json();
+      // console.log('działa')
+      setData(res.products);
+    }
+    fetchData();
+  }, []);
+  const itemOne = data[5];
+  const itemTwo = data[6];
+  const itemThree = data[7];
+  const itemFour = data[1];
 
   return (
     <>

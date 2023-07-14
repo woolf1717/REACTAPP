@@ -33,7 +33,7 @@
     "pages/api/sendpost.mjss",
     "components/shop/itemslist/itemslist.js",
     "pages/api/getdata.ts"
-  ],
+, "pages/products/[id].js", "components/shop/shopcomponents/itemvertical.jsx", "pages/api/getproducts.jsx"  ],
   "exclude": ["node_modules"],
   "useUnknownInCatchVariables": false
 }

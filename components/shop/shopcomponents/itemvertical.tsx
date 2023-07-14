@@ -11,6 +11,7 @@ import { flagPopupOn } from "../../redux/reduxFeatures/shopPopup";
 import Rateing from "./rateing";
 
 export default function ItemVertical({
+  id,
   src,
   alt,
   name,
@@ -21,20 +22,20 @@ export default function ItemVertical({
   const dispatch = useDispatch();
   return (
     <>
+    {/* {console.log(id, alt, name, counter, starsprops, price)} */}
       <div
-        onClick={() => {
-          dispatch(flagPopupOn(name));
-        }}
+        onClick={() => {dispatch(flagPopupOn(id))}}
       >
         <div>
-          <Image
+        {src &&
+         (<Image
             src={src}
             width={75}
             height={75}
             quality={75}
             alt={alt}
             className="relative  left-1/2 -translate-x-2/4 pt-px"
-          />
+          />)}
         </div>
         <div className="text-center text-xxxs font-semibold">{name}</div>
         <div className="flex flex-row justify-center text-xxxs text-yellow-400 ">

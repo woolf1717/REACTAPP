@@ -12,7 +12,6 @@ const shopCart = createSlice({
   initialState: { value: initialStateValue },
   reducers: {
     addToCart: (state, action: PayloadAction<ShopCartState>) => {
-      //tu mam numer indexu
       if (
         state.value.findIndex((el) => el.name === action.payload.name) === -1
       ) {

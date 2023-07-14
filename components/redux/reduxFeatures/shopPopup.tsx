@@ -1,10 +1,10 @@
 ﻿import { createSlice } from "@reduxjs/toolkit";
 
 interface PopupState {
-  value: string;
+  value: number;
 }
 
-const initialState: PopupState = { value: "" };
+const initialState: PopupState = { value: 0 };
 
 const shopPopup = createSlice({
   name: "popup",
@@ -14,7 +14,7 @@ const shopPopup = createSlice({
       state.value = action.payload;
     },
     flagPopupOff: (state) => {
-      state.value = "";
+      state.value = 0;
     },
   },
 });
