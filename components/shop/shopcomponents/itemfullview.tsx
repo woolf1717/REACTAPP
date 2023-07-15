@@ -5,8 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { useEffect, useState } from "react";
 
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { flagPopupOff } from "../../redux/reduxFeatures/shopPopup";
 

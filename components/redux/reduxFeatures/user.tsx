@@ -1,6 +1,6 @@
 ﻿import { createSlice } from "@reduxjs/toolkit";
 
-const initialStateValue = { name: "", age: 0, email: "" };
+const initialStateValue = { username: "", password:"", email:"", phonenumber:"", gender: "", birthmonth: "", birthday: "", create_time:"", user_type:"", logged: false};
 
 const userSlice = createSlice({
   name: "user",
@@ -8,6 +8,7 @@ const userSlice = createSlice({
   reducers: {
     login: (state, action) => {
       state.value = action.payload;
+      state.value.logged = true
     },
     logout: (state) => {
       state.value = initialStateValue;

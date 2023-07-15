@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import PostShort from "./post";
 
@@ -9,256 +9,30 @@ import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 const BlogArticlesSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [inputValue, setInputValue] = useState<string>("");
-  const blogPosts = [
-    {
-      title: "17. JAVASCRIPT",
-      body: `JavaScript is the world most popular
-        lightweight, interpreted compiled programming
-        language. It is also known as scripting
-        language for web pages. It is well-known for
-        the development of web pages, many non-browser
-        environments also use it. JavaScript can be
-        used for Client-side developments as well as
-        Server-side developments`,
-      author: "Nishant Singh ",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
-    },
-    {
-      title: "16. Data Structure ",
-      body: `There are many real-life examples of
-        a stack. Consider an example of plates stacked
-        over one another in the canteen. The plate
-        which is at the top is the first one to be
-        removed, i.e. the plate which has been placed
-        at the bottommost position remains in the
-        stack for the longest period of time. So, it
-        can be simply seen to follow LIFO(Last In
-        First Out)/FILO(First In Last Out) order.`,
-      author: "Suresh Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
-    },
-    {
-      title: "15. Algorithm",
-      body: `The word Algorithm means “a process
-        or set of rules to be followed in calculations
-        or other problem-solving operations”. Therefore
-        Algorithm refers to a set of rules/instructions
-        that step-by-step define how a work is to be
-        executed upon in order to get the expected
-        results. `,
-      author: "Monu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
-    },
-    {
-      title: "14. Computer Network",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-    {
-      title: "13. JAVASCRIPT",
-      body: `JavaScript is the world most popular
-        lightweight, interpreted compiled programming
-        language. It is also known as scripting
-        language for web pages. It is well-known for
-        the development of web pages, many non-browser
-        environments also use it. JavaScript can be
-        used for Client-side developments as well as
-        Server-side developments`,
-      author: "Nishant Singh ",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
-    },
-    {
-      title: "12. Data Structure ",
-      body: `There are many real-life examples of
-        a stack. Consider an example of plates stacked
-        over one another in the canteen. The plate
-        which is at the top is the first one to be
-        removed, i.e. the plate which has been placed
-        at the bottommost position remains in the
-        stack for the longest period of time. So, it
-        can be simply seen to follow LIFO(Last In
-        First Out)/FILO(First In Last Out) order.`,
-      author: "Suresh Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
-    },
-    {
-      title: "11. Algorithm",
-      body: `The word Algorithm means “a process
-        or set of rules to be followed in calculations
-        or other problem-solving operations”. Therefore
-        Algorithm refers to a set of rules/instructions
-        that step-by-step define how a work is to be
-        executed upon in order to get the expected
-        results. `,
-      author: "Monu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
-    },
-    {
-      title: "10. Computer Network",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-    {
-      title: "9. JAVASCRIPT",
-      body: `JavaScript is the world most popular
-        lightweight, interpreted compiled programming
-        language. It is also known as scripting
-        language for web pages. It is well-known for
-        the development of web pages, many non-browser
-        environments also use it. JavaScript can be
-        used for Client-side developments as well as
-        Server-side developments`,
-      author: "Nishant Singh ",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
-    },
-    {
-      title: "8. Data Structure ",
-      body: `There are many real-life examples of
-        a stack. Consider an example of plates stacked
-        over one another in the canteen. The plate
-        which is at the top is the first one to be
-        removed, i.e. the plate which has been placed
-        at the bottommost position remains in the
-        stack for the longest period of time. So, it
-        can be simply seen to follow LIFO(Last In
-        First Out)/FILO(First In Last Out) order.`,
-      author: "Suresh Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
-    },
-    {
-      title: "7. Algorithm",
-      body: `The word Algorithm means “a process
-        or set of rules to be followed in calculations
-        or other problem-solving operations”. Therefore
-        Algorithm refers to a set of rules/instructions
-        that step-by-step define how a work is to be
-        executed upon in order to get the expected
-        results. `,
-      author: "Monu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
-    },
-    {
-      title: "6. Computer Network",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-    {
-      title: "5. Computer Network",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-    {
-      title: "4. Computer Network",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-    {
-      title: "3. Computer Network",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-    {
-      title: "2. ",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-    {
-      title: "1. Computer Network",
-      body: `An interconnection of multiple devices,
-        also known as hosts, that are connected using
-        multiple paths for the purpose of sending/
-        receiving data media. Computer networks can
-        also include multiple devices/mediums which
-        help in the communication between two different
-        devices; these are known as Network devices
-        and include things such as routers, switches,
-        hubs, and bridges. `,
-      author: "Sonu Kr",
-      imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
-    },
-  ];
 
-  const postsCount = blogPosts.length;
+  const [data, setData] = useState<any>([]);
+  const blogPosts = data
+   
+  useEffect(() => {
+    async function fetchData() {
+      const api = "http://localhost:3000/api/getarticles";
+      const postData = {
+        method: "Post",
+        headers: { "Content-Type": "application/json" }
+      }
+      const response = await fetch(api, postData);
+      const res = await response.json();
+      setData(res.products.reverse());
+    }
+    fetchData();
+  }, []);
+  // const dataSorting = () => {
+  //   for(let i = 0; i > data.length; i++){
+      
+  //   }
+  // }
+  // dataSortig()
+  const postsCount = data.length;
   const pagesCount = Math.ceil(postsCount / 4);
   const firstVisible = currentPage * 4 - 4;
   const forthVisible = currentPage * 4 - 1;
@@ -276,7 +50,9 @@ const BlogArticlesSection = () => {
   };
   return (
     <>
+    
       <div className="posts-container">
+        {/* elo {JSON.stringify(data)} */}
         {visiblePosts.map((post, index) => (
           <PostShort key={index} index={index} post={post} />
         ))}{" "}
