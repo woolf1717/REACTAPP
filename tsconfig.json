@@ -32,8 +32,14 @@
     "components/shop/shopcomponents/itemhorizontal.tsx",
     "pages/api/sendpost.mjss",
     "components/shop/itemslist/itemslist.js",
-    "pages/api/getdata.ts"
-, "pages/products/[id].js", "components/shop/shopcomponents/itemvertical.jsx", "pages/api/getproducts.jsx"  ],
+    "pages/api/getdata.ts",
+    "pages/api/getusers.ts",
+    "pages/products/[id].js",
+    "components/shop/shopcomponents/itemvertical.jsx",
+    "pages/api/getproducts.jsx",
+    "components/menucomponents/loginForm.jsx",
+    "pages/api/getusers.jsx"
+  ],
   "exclude": ["node_modules"],
   "useUnknownInCatchVariables": false
 }
