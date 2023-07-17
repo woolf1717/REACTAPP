@@ -1,7 +1,13 @@
 ﻿10.SHOP. Make a system that allows you to "pay" and "deploy" resouces.
 
 12. Try and remove global state in store to useEffect with useRef. sql8.freesqldatabase.com	sql8631640	sql8631640
-12. 13. 14. 15. 16. 17.LOGIN FORM. Make an actual user's account, and give it actual functionality. (to read full article you must log in)
+12. Secure API.
+13. Create login form. 
+14. Typescript the code.
+15. Clean the code. 
+16. Add posibility to allow the above norm user to add post and maybe products.
+
+13. 14. 15. 16. 17.LOGIN FORM. Make an actual user's account, and give it actual functionality. (to read full article you must log in)
 18.BLOG. Cooperetion info (if you want to add article ask for blogger status on you accoud)
 19.SEARCH. Add search engine.
 
