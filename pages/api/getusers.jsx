@@ -12,21 +12,13 @@ export default async function handler(req, res) {
 
   if (req.method === "POST") {
     console.log("sth");
-    const userName = req.body.username;
-    const userEmail = req.body.email;
-    const userPassword = req.body.password;
-    const userPhonenumber = req.body.phonenumber;
-    const userGender = req.body.gender;
-    const userBirthyear = req.body.birthyear;
-    const userBirthmonth = req.body.birthmonth;
-    const userBirthday = req.body.birthday;
-    const user_type = req.body.user_type;
+    const userData = `"${req.body.username}", "${req.body.email}", "${req.body.password}", "${req.body.phonenumber}", "${req.body.gender}", "${req.body.birthyear}", "${req.body.birthmonth}", "${req.body.birthday}", "${req.body.user_type}"`;
     const addUser = await query({
-      query:
-        "INSERT INTO users (username, email, password, phonenumber, gender, birthyear, birthmonth, birthday, user_type) VALUES ?",
-      values: [user],
+      query: `INSERT INTO users ( username, email, password, phonenumber, gender, birthyear, birthmonth, birthday, user_type) VALUES (${userData});`,
+      values: [userData],
     });
-    console.log("działa");
+
+    console.log(addUser);
     let user = [];
 
     if (addUser.insertId) {
@@ -36,15 +28,16 @@ export default async function handler(req, res) {
     }
 
     user = {
-      username: userName,
-      email: userEmail,
-      password: userPassword,
-      phonenumber: userPhonenumber,
-      gender: userGender,
-      birthyear: userBirthyear,
-      birthmonth: userBirthmonth,
-      birthday: userBirthday,
-      user_type: user_type,
+      user_id: addUser.insertId,
+      username: userData.username,
+      email: userData.email,
+      password: userData.password,
+      phonenumber: userData.phonenumber,
+      gender: userData.gender,
+      birthyear: userData.birthyear,
+      birthmonth: userData.birthmonth,
+      birthday: userData.birthday,
+      user_type: "user",
     };
 
     res.status(200).json({ response: { message: message, products: user } });

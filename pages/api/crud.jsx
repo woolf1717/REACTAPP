@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       query: "SELECT * from crud",
       values: [],
     });
-    res.status(200).json({ products: products });
+    res.status(200).json({ items: products });
   }
 
   if (req.method === "POST") {
@@ -16,6 +16,7 @@ export default async function handler(req, res) {
       query: "INSERT INTO crud (text) VALUES (?)",
       values: [productName],
     });
+    console.log(addProduct);
     let product = [];
 
     if (addProduct.insertId) {

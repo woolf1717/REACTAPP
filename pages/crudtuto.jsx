@@ -48,7 +48,7 @@ export default function Home() {
     if (response.response.message !== "success") return;
     const newproduct = response.response.product;
 
-    console.log(newproduct);
+    // console.log(newproduct);
     setCreated(true);
 
     setProducts([

@@ -38,7 +38,8 @@
     "components/shop/shopcomponents/itemvertical.jsx",
     "pages/api/getproducts.jsx",
     "components/menucomponents/loginForm.jsx",
-    "pages/api/getusers.jsx"
+    "pages/api/getusers.tsx",
+    "components/newsfeed.tsx"
   ],
   "exclude": ["node_modules"],
   "useUnknownInCatchVariables": false

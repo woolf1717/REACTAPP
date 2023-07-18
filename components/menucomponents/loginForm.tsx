@@ -81,7 +81,7 @@ export default function LoginForm() {
         birthyear: newBirthDate.slice(0, 4),
         birthmonth: newBirthDate.slice(5, 7),
         birthday: newBirthDate.slice(8, 10),
-        user_ype: "user",
+        user_type: "user",
       }),
     };
     console.table(postData);
