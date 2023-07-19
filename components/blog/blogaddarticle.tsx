@@ -83,7 +83,7 @@ export default function BlogAddArticle() {
               ></input>
               <label className="mt-2">IMG.jpg update</label>
               <br />
-              <button className="mt-px border border-2">Update jpg.</button>
+              <button className="mt- border border-2">Update jpg.</button>
               <br />
               <br />
               <label htmlFor="">Author: </label>Here I will put username
