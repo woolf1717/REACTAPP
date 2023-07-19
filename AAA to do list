@@ -1,20 +1,20 @@
 ﻿10.SHOP. Make a system that allows you to "pay" and "deploy" resouces.
 
-12. Try and remove global state in store to useEffect with useRef. sql8.freesqldatabase.com	sql8631640	sql8631640
-12. Secure API.
-13. Create login form. 
+12. Try and remove global state in store to useEffect with useRef. sql8.freesqldatabase.com sql8631640 sql8631640
+13. Secure API.
+
 14. Typescript the code.
-15. Clean the code. 
+15. Clean the code.
 16. Add posibility to allow the above norm user to add post and maybe products.
 
-13. 14. 15. 16. 17.LOGIN FORM. Make an actual user's account, and give it actual functionality. (to read full article you must log in)
-18.BLOG. Cooperetion info (if you want to add article ask for blogger status on you accoud)
+13.REDUX. Create possibility to swich user type to be able to to 14. 15. 16.
+18.BLOG. Cooperetion info (if you want to add article ask for admin status on you accoud)
 19.SEARCH. Add search engine.
 
 Free pass:
 7.SHOP. Change shop products for ones with actual products made by you. Figure out what kind of content you want to provide and list your ideas.(dont need it at the moment)
-11.db conection with sql. 
-Done:
+11.db conection with sql.
+Done:13. Create login form.17.LOGIN FORM. Make an actual user's account, and give it actual functionality. (to read full article you must log in)
 1.FOOTER. Find a scheme that suits your need's.
 2.FOOTER. Add categories: social, woth to know, categories(hyperlink to certain dir). 3.
 11.SHOP. Add slider so you will be able to see more product.

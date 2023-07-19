@@ -11,15 +11,15 @@ const BlogArticlesSection = () => {
   const [inputValue, setInputValue] = useState<string>("");
 
   const [data, setData] = useState<any>([]);
-  const blogPosts = data
-   
+  const blogPosts = data;
+
   useEffect(() => {
     async function fetchData() {
       const api = "http://localhost:3000/api/getarticles";
       const postData = {
-        method: "Post",
-        headers: { "Content-Type": "application/json" }
-      }
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      };
       const response = await fetch(api, postData);
       const res = await response.json();
       setData(res.products.reverse());
@@ -28,7 +28,7 @@ const BlogArticlesSection = () => {
   }, []);
   // const dataSorting = () => {
   //   for(let i = 0; i > data.length; i++){
-      
+
   //   }
   // }
   // dataSortig()
@@ -50,7 +50,6 @@ const BlogArticlesSection = () => {
   };
   return (
     <>
-    
       <div className="posts-container">
         {/* elo {JSON.stringify(data)} */}
         {visiblePosts.map((post, index) => (
